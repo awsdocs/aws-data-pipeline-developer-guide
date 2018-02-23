@@ -32,7 +32,7 @@ The following is an example of this object type\. The `InputData` object referen
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
 | attemptTimeout | Timeout for remote work completion\. If set then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
-| failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
+| failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun\. | Enumeration | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maximumRetries | Maximum number attempt retries on failure | Integer | 
 | onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
@@ -40,7 +40,7 @@ The following is an example of this object type\. The `InputData` object referen
 | onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
 | preconditionTimeout | The period from start after which precondition is marked as failed if still not satisfied | Period | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progres for the specified period may be considered stalled and so retried\. | Period | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 
 
@@ -52,17 +52,17 @@ The following is an example of this object type\. The `InputData` object referen
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of depedency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
 | errorStackTrace | The error stack trace if this object failed\. | String | 
 | hadoopJobLog | Hadoop job logs available on attempts for EMR\-based activities\. | String | 
 | hostname | The host name of client that picked up the task attempt\. | String | 
-| node | The node for which this precondition is being performed | Reference Object, e\.g\. "node":\{"ref":"myRunnableObjectId"\} | 
+| node | The node for which this precondition is being performed\. | Reference Object, e\.g\. "node":\{"ref":"myRunnableObjectId"\} | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object | DateTime | 
-| @scheduledStartTime | Schedule start time for object | DateTime | 
+| @scheduledEndTime | Schedule end time for object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for object\. | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version the object was created with\. | String | 
 | @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 
@@ -72,9 +72,9 @@ The following is an example of this object type\. The `InputData` object referen
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="exists-seealso"></a>
 

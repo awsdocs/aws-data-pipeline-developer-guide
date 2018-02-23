@@ -29,7 +29,7 @@ You can also use `S3KeyExists` as a precondition on the second pipeline that wai
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | role | Specifies the role to be used to execute the precondition\. | String | 
-| s3Key | Amazon S3 key to check for existence\. | String | 
+| s3Key | The Amazon S3 key\. | String | 
 
 
 ****  
@@ -37,7 +37,7 @@ You can also use `S3KeyExists` as a precondition on the second pipeline that wai
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
-| attemptTimeout | Timeout before attempting to complete remote work one more time\. If set then a remote activity that does not complete within the set time after starting is attempted again\. | Period | 
+| attemptTimeout | Timeout before attempting to complete remote work one more time\. If set, then a remote activity that does not complete within the set time after starting is attempted again\. | Period | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun\. | Enumeration | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maximumRetries | Maximum number of attempts that are initiated on failure\. | Integer | 
@@ -58,7 +58,7 @@ You can also use `S3KeyExists` as a precondition on the second pipeline that wai
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | currentRetryCount | Number of times the precondition was tried in this attempt\. | String | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 

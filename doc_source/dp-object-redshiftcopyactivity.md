@@ -156,7 +156,7 @@ For a tutorial, see [Copy Data to Amazon Redshift Using AWS Data Pipeline](dp-co
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| insertMode |   Determines what AWS Data Pipeline does with pre\-existing data in the target table that overlaps with rows in the data to be loaded\. Valid values are: `KEEP_EXISTING`, `OVERWRITE_EXISTING`, `TRUNCATE` and `APPEND`\. `KEEP_EXISTING` adds new rows to the table, while leaving any existing rows unmodified\. `KEEP_EXISTING` and` OVERWRITE_EXISTING` use the primary key, sort, and distribution keys to identify which incoming rows to match with existing rows\. See [Updating and Inserting New Data](http://docs.aws.amazon.com/redshift/latest/dg/t_updating-inserting-using-staging-tables-.html) in the Amazon Redshift *Database Developer Guide*\.  `TRUNCATE` deletes all the data in the destination table before writing the new data\.  `APPEND` adds all records to the end of the Redshift table\. `APPEND` does not require a primary, distribution key, or sort key so items that may be potential duplicates may be appended\.  | Enumeration | 
+| insertMode |   Determines what AWS Data Pipeline does with pre\-existing data in the target table that overlaps with rows in the data to be loaded\. Valid values are: `KEEP_EXISTING`, `OVERWRITE_EXISTING`, `TRUNCATE` and `APPEND`\. `KEEP_EXISTING` adds new rows to the table, while leaving any existing rows unmodified\. `KEEP_EXISTING` and ` OVERWRITE_EXISTING` use the primary key, sort, and distribution keys to identify which incoming rows to match with existing rows\. See [Updating and Inserting New Data](http://docs.aws.amazon.com/redshift/latest/dg/t_updating-inserting-using-staging-tables-.html) in the Amazon Redshift *Database Developer Guide*\.  `TRUNCATE` deletes all the data in the destination table before writing the new data\.  `APPEND` adds all records to the end of the Redshift table\. `APPEND` does not require a primary, distribution key, or sort key so items that may be potential duplicates may be appended\.  | Enumeration | 
 
 
 ****  
@@ -180,7 +180,7 @@ For a tutorial, see [Copy Data to Amazon Redshift Using AWS Data Pipeline](dp-co
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
 | attemptTimeout | Timeout for remote work completion\. If set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
-| commandOptions |  Takes parameters to pass to the Amazon Redshift data node during the `COPY` operation\. For information on parameters, see [COPY](http://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the Amazon Redshift *Database Developer Guide*\. As it loads the table, `COPY` attempts to implicitly convert the strings to the data type of the target column\. In addition to the default data conversions that happen automatically, if you receive errors or have other conversion needs, you can specify additional conversion parameters\. For information, see [Data Conversion Parameters](http://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-data-conversion.html) in the Amazon Redshift *Database Developer Guide*\. If a data format is associated with the input or output data node, then the provided parameters are ignored\.  Because the copy operation first uses `COPY` to insert data into a staging table, and then uses an `INSERT` command to copy the data from the staging table into the destination table, some `COPY` parameters do not apply, such as the `COPY` command's ability to enable automatic compression of the table\. If compression is required, add column encoding details to the `CREATE TABLE` statement\.   | String | 
+| commandOptions |  Takes parameters to pass to the Amazon Redshift data node during the `COPY` operation\. For information on parameters, see [COPY](http://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the Amazon Redshift *Database Developer Guide*\. As it loads the table, `COPY` attempts to implicitly convert the strings to the data type of the target column\. In addition to the default data conversions that happen automatically, if you receive errors or have other conversion needs, you can specify additional conversion parameters\. For information, see [Data Conversion Parameters](http://docs.aws.amazon.com/redshift/latest/dg/copy-parameters-data-conversion.html) in the Amazon Redshift *Database Developer Guide*\. If a data format is associated with the input or output data node, then the provided parameters are ignored\.  Because the copy operation first uses `COPY` to insert data into a staging table, and then uses an `INSERT` command to copy the data from the staging table into the destination table, some `COPY` parameters do not apply, such as the `COPY` command's ability to enable automatic compression of the table\. If compression is required, add column encoding details to the `CREATE TABLE` statement\.  Also, in some cases when it needs to unload data from the Amazon Redshift cluster and create files in Amazon S3, the `RedshiftCopyActivity` relies on the `UNLOAD` operation from Amazon Redshift\. To improve performance during copying and unloading, specify `PARALLEL OFF` parameter from the `UNLOAD` command\. For information on parameters, see [UNLOAD](http://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html) in the Amazon Redshift *Database Developer Guide*\.  | String | 
 | dependsOn | Specify dependency on another runnable object\. | Reference Object: "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
 | input | The input data node\. The data source can be Amazon S3, DynamoDB, or Amazon Redshift\. | Reference Object: "input":\{"ref":"myDataNodeId"\} | 
@@ -209,7 +209,7 @@ For a tutorial, see [Copy Data to Amazon Redshift Using AWS Data Pipeline](dp-co
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of dependency chain the object failed on\. | Reference Object: "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object: "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
@@ -225,8 +225,8 @@ For a tutorial, see [Copy Data to Amazon Redshift Using AWS Data Pipeline](dp-co
 | @latestRunTime | Time the latest run for which the execution was scheduled\. | DateTime | 
 | @nextRunTime | Time of run to be scheduled next\. | DateTime | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object | DateTime | 
-| @scheduledStartTime | Schedule start time for object | DateTime | 
+| @scheduledEndTime | Schedule end time for object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for object\. | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version the object was created with\. | String | 
 | @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object: "waitingOn":\{"ref":"myRunnableObjectId"\} | 
@@ -236,6 +236,6 @@ For a tutorial, see [Copy Data to Amazon Redshift Using AWS Data Pipeline](dp-co
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
 | @sphere | The sphere of an object\. Denotes its place in the life cycle\. For example, Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

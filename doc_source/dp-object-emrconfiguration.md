@@ -137,16 +137,16 @@ This object includes the following fields\.
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| classification | classification for the configuration | String | 
+| classification | Classification for the configuration\. | String | 
 
 
 ****  
 
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| configuration | sub\-configuration for this configuration | Reference Object, e\.g\. "configuration":\{"ref":"myEmrConfigurationId"\} | 
+| configuration | Sub\-configuration for this configuration\. | Reference Object, e\.g\. "configuration":\{"ref":"myEmrConfigurationId"\} | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
-| property | configuration property | Reference Object, e\.g\. "property":\{"ref":"myPropertyId"\} | 
+| property | Configuration property\. | Reference Object, e\.g\. "property":\{"ref":"myPropertyId"\} | 
 
 
 ****  

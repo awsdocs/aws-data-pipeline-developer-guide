@@ -34,7 +34,7 @@ For more information, see [Working with Tables in DynamoDB](http://docs.aws.amaz
 
 1. Enter a unique name for your table in **Table Name**\.
 
-1. In the **Primary Key : Partition Key** field, enter the number `Id`\.
+1. In the **Primary Key: Partition Key** field, enter the number `Id`\.
 
 1. Click **Continue** to skip the optional **Add Indexes** page\.
 

@@ -28,7 +28,7 @@ Complete the initial pipeline creation screen to create the pipeline definition\
 
 1. In **Description**, enter a description\.
 
-1. Choose a pipeline definition **Source**\. You can use a template, import an existing JSON\-based pipeline definition from your local file system or an Amazon S3 bucket, or create a pipeline interactively on the Architect page\.
+1. <a name="step_cjr_wb4_4q"></a>Choose a pipeline definition **Source**\. You can use a template, import an existing JSON\-based pipeline definition from your local file system or an Amazon S3 bucket, or create a pipeline interactively on the Architect page\.
 
    Templates provide common scenarios encountered in AWS Data Pipeline\. You can customize a template to fit your needs by filling out the associated parameter values\. 
 **Note**  

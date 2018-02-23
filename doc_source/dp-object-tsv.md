@@ -43,6 +43,6 @@ The following is an example of this object type\.
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

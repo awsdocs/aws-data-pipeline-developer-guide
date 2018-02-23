@@ -41,7 +41,7 @@ The following elements make up a policy statement:
 
   AWS Data Pipeline implements the AWS\-wide context keys \(see [Available Keys for Conditions](http://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#AvailableKeys)\), plus the following service\-specific keys\.
 
-  + `datapipeline:PipelineCreator` — To grant access to the user that created the pipeline\. For an example, see Grant the pipeline owner full access\.
+  + `datapipeline:PipelineCreator` — To grant access to the user that created the pipeline\. For an example, see [Grant the pipeline owner full access](dp-example-tag-policies.md#ex3)\.
 
   + `datapipeline:Tag` — To grant access based on pipeline tagging\. For more information, see [Controlling Access to Pipelines Using Tags](#dp-control-access-tags)\.
 
@@ -102,7 +102,7 @@ In addition, the manager attaches the following policy to the production IAM gro
 }
 ```
 
-For more examples, see Grant users read\-only access based on a tag and Grant users full access based on a tag\.
+For more examples, see [Grant users read\-only access based on a tag](dp-example-tag-policies.md#ex1) and [Grant users full access based on a tag](dp-example-tag-policies.md#ex2)\.
 
 ## Controlling Access to Pipelines Using Worker Groups<a name="dp-control-access-workergroup"></a>
 

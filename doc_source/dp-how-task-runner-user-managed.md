@@ -40,7 +40,7 @@ This section explains how to install and configure Task Runner and its prerequis
 
 1.  Task Runner needs to connect to the AWS Data Pipeline web service to process your commands\. In this step, you will configure Task Runner with an AWS account that has permissions to create or manage data pipelines\. 
 
-   Create a JSON file named `credentials.json` \(you can use a different name if you prefer\), which specifies an access key ID and secret access key using the format `{ "access-id": MyAccessKeyID, "private-key": MySecretAccessKey } `\. Copy the file to the directory where you installed Task Runner\. 
+   Create a JSON file named `credentials.json` \(you can use a different name if you prefer\), which specifies an access key ID and secret access key using the format `{ "access-id": "MyAccessKeyID", "private-key": "MySecretAccessKey" } `\. Copy the file to the directory where you installed Task Runner\. 
 
     For CLI access, you need an access key ID and secret access key\. Use IAM user access keys instead of AWS account root user access keys\. IAM lets you securely control access to AWS services and resources in your AWS account\. For more information about creating access keys, see [Understanding and Getting Your Security Credentials](http://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) in the *AWS General Reference*\. 
 

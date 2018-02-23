@@ -27,8 +27,8 @@ The following is an example of this object type\.
 | --- | --- | --- | 
 | connectionString | The JDBC connection string to access the database\. | String | 
 | jdbcDriverClass | The driver class to load before establishing the JDBC connection\. | String | 
-| \*password | The password to supply | String | 
-| username | The user name to supply when connecting to the database | String | 
+| \*password | The password to supply\. | String | 
+| username | The user name to supply when connecting to the database\. | String | 
 
 
 ****  
@@ -37,7 +37,7 @@ The following is an example of this object type\.
 | --- | --- | --- | 
 | databaseName | Name of the logical database to attach to | String | 
 | jdbcDriverJarUri | The location in Amazon S3 of the JDBC driver JAR file used to connect to the database\. AWS Data Pipeline must have permission to read this JAR file\. | String | 
-| jdbcProperties | Pairs of the form A=B that will be set as properties on jdbc connections for this database | String | 
+| jdbcProperties | Pairs of the form A=B that will be set as properties on JDBC connections for this database | String | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
 
 
@@ -52,6 +52,6 @@ The following is an example of this object type\.
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object deotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

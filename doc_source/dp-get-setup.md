@@ -68,7 +68,7 @@ If you are using a CLI or an API and you have not used the AWS Data Pipeline con
 
    1. On the **Review** page, choose **Create Role**\.
 
-Alternatively, you can create and use custom roles\. For more information about how to specify custom roles for an `EmrCluster` object, see Specify custom IAM roles\.
+Alternatively, you can create and use custom roles\. For more information about how to specify custom roles for an `EmrCluster` object, see [Specify custom IAM roles](dp-object-emrcluster.md#example4)\.
 
 ## Assign a Managed Policy with PassRole to Predefined IAM Roles<a name="dp-iam-create-user-groups"></a>
 
@@ -121,7 +121,7 @@ Create these two types of custom roles:
 
 For more information, see [Editing the Trust Relationship for an Existing Role](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/edit_trust.html)\.
 
-For more information about how to specify custom roles for an `EmrCluster` object, see Specify custom IAM roles\.
+For more information about how to specify custom roles for an `EmrCluster` object, see [Specify custom IAM roles](dp-object-emrcluster.md#example4)\.
 
 To create your own inline policy for any `CUSTOM_ROLE` role that has access to AWS Data Pipeline, use this example of the inline policy as a guideline\. The `"Action":"iam:PassRole"` is specified for `CUSTOM_ROLE`\.
 

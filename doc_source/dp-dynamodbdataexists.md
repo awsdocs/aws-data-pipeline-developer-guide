@@ -27,7 +27,7 @@
 | onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
 | preconditionTimeout | The period from start after which precondition is marked as failed if still not satisfied | Period | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progres for the specified period may be considered stalled and so retried\. | Period | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 
 
@@ -39,7 +39,7 @@
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of depedency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | currentRetryCount | Number of times the precondition was tried in this attempt\. | String | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 

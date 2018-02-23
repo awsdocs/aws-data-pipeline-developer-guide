@@ -18,7 +18,7 @@ First, create the pipeline\.
 
 1. For **Source**, select **Build using a template**, and then select the following template: **Import DynamoDB backup data from S3**\.
 
-1. Under **Parameters**, set **Input S3 folder** to `s3://elasticmapreduce/samples/Store/ProductCatalog`, which is a sample data source, and set **DynamoDB table name** to the name of your table\.
+1. Under **Parameters**, set **Input S3 folder** to `s3://elasticmapreduce/samples/Store/ProductCatalog`, which is a directory that contains the sample data source, `ProductCatalog.txt`, and set **DynamoDB table name** to the name of your table\. 
 
 1. Under **Schedule**, choose **on pipeline activation**\.
 
@@ -52,7 +52,7 @@ Next, configure the Amazon SNS notification actions that AWS Data Pipeline perfo
 
    1. From **Type**, select `SnsAlarm`\.
 
-   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
+   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\)\.
 
    1. Enter a subject and a message\.
 
@@ -62,6 +62,6 @@ Next, configure the Amazon SNS notification actions that AWS Data Pipeline perfo
 
    1. From **Type**, select `SnsAlarm`\.
 
-   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
+   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\)\.
 
    1. Enter a subject and a message\.

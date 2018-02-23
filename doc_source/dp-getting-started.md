@@ -2,7 +2,7 @@
 
 AWS Data Pipeline helps you sequence, schedule, run, and manage recurring data processing workloads reliably and cost\-effectively\. This service makes it easy for you to design extract\-transform\-load \(ETL\) activities using structured and unstructured data, both on\-premises and in the cloud, based on your business logic\.
 
-To use AWS Data Pipeline, you create a *pipeline definition* that specifies the business logic for your data processing\. A typical pipeline definition consists of activities that define the work to perform, data nodes that define the location and type of input and output data, and a schedule that determines when the activities are performed\.
+To use AWS Data Pipeline, you create a *pipeline definition* that specifies the business logic for your data processing\. A typical pipeline definition consists of [activities](dp-concepts-activities.md) that define the work to perform, [data nodes](dp-concepts-datanodes.md) that define the location and type of input and output data, and a [schedule](dp-concepts-schedules.md) that determines when the activities are performed\.
 
 In this tutorial, you run a shell command script that counts the number of GET requests in Apache web server logs\. This pipeline runs every 15 minutes for an hour, and writes output to Amazon S3 on each iteration\.
 

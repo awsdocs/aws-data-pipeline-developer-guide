@@ -1,7 +1,7 @@
 # EmrCluster<a name="dp-object-emrcluster"></a>
 
 Represents the configuration of an EMR cluster\. This object is used by [EmrActivity](dp-object-emractivity.md) to launch a cluster\.
-
+<a name="emrcluster-schedulers"></a>
 **Schedulers**  
 Schedulers provide a way to specify resource allocation and job prioritization within a Hadoop cluster\. Administrators or users can choose a scheduler for various classes of users and applications\. A scheduler will possibly use queues to allocate resources to users and applications\. You set up those queues when you create the cluster\. You can then setup priority for certain types of work and user over others\. This provides for efficient use of cluster resources, while allowing more than one user to submit work to the cluster\. There are three types of scheduler available:
 
@@ -12,13 +12,13 @@ Schedulers provide a way to specify resource allocation and job prioritization w
 + Default — Used by the cluster, which could be configured by your site\.
 
 **Amazon EMR 2\.x, 3\.x vs\. 4\.x platforms**  
-AWS Data Pipeline supports EMR clusters based on release label emr\-4\.0\.0 or later, which requires the use of the `releaseLabel` field for the corresponding `EmrCluster` object\. For previous platforms known as AMI releases, use the `amiVersion` field instead\. If you are using a self\-managed `EmrCluster` object with a release label, use the most current Task Runner\. For more information about TaskRunner, see [Working with Task Runner](dp-using-task-runner.md)\. You can configure all classifications found in the Amazon EMR configuration API\. For a list of all configurations see the Configuring Applications topic in the Amazon EMR Release Guide: [http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/](http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/) as well as the [[ERROR] BAD/MISSING LINK TEXT](dp-object-emrconfiguration.md) and [[ERROR] BAD/MISSING LINK TEXT](dp-object-property.md) object references\. 
+AWS Data Pipeline supports EMR clusters based on release label emr\-4\.0\.0 or later, which requires the use of the `releaseLabel` field for the corresponding `EmrCluster` object\. For previous platforms known as AMI releases, use the `amiVersion` field instead\. If you are using a self\-managed `EmrCluster` object with a release label, use the most current Task Runner\. For more information about TaskRunner, see [Working with Task Runner](dp-using-task-runner.md)\. You can configure all classifications found in the Amazon EMR configuration API\. For a list of all configurations see the Configuring Applications topic in the Amazon EMR Release Guide: [http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/](http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/) as well as the [EmrConfiguration](dp-object-emrconfiguration.md) and [Property](dp-object-property.md) object references\. 
 
 ## Examples<a name="emrcluster-example"></a>
 
 The following are examples of this object type\.
 
-**Example 1: Launch an EMR cluster using the hadoopVersion field**  
+**Example 1: Launch an EMR cluster using the hadoopVersion field**  <a name="example1"></a>
 The following example launches an EMR cluster using AMI version 1\.0 and Hadoop 0\.20\.  
 
 ```
@@ -55,7 +55,7 @@ The following example launches an EMR cluster using the newer `releaseLabel` fie
 }
 ```
 
-**Example 2: Install additional software on your EMR cluster**  
+**Example 2: Install additional software on your EMR cluster**  <a name="example2"></a>
 `EmrCluster` provides the `supportedProducts` field that installs third\-party software on an EMR cluster, for example installing a custom distribution of Hadoop like MapR\. It accepts a comma\-separated list of arguments for the third\-party software to read and act on\. The following example shows how to use the `supportedProducts` field of `EmrCluster` to create a custom MapR M3 edition cluster with Karmasphere Analytics installed, and run an `EmrActivity` object on it\.  
 
 ```
@@ -79,7 +79,7 @@ The following example launches an EMR cluster using the newer `releaseLabel` fie
 }
 ```
 
-**Example 3: Disable server\-side encryption on 3\.x AMIs**  
+**Example 3: Disable server\-side encryption on 3\.x AMIs**  <a name="example3"></a>
 An `EmrCluster` activity with a Hadoop version 2\.*x* created by AWS Data Pipeline enables server\-side encryption by default\. If you would like to disable server\-side encryption, you must specify a bootstrap action in the cluster object definition\.  
 The following example creates an `EmrCluster` activity with server\-side encryption disabled:  
 
@@ -98,7 +98,7 @@ The following example creates an `EmrCluster` activity with server\-side encrypt
 }
 ```
 
-**Example 3: Disable server\-side encryption on 4\.x releases**  
+**Example 3: Disable server\-side encryption on 4\.x releases**  <a name="example4"></a>
 You must disable server\-side encryption using a `EmrConfiguration` object\.  
 The following example creates an `EmrCluster` activity with server\-side encryption disabled:  
 

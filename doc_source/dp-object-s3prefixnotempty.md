@@ -23,7 +23,7 @@ The following is an example of this object type using required, optional, and ex
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | role | Specifies the role to be used to execute the precondition\. | String | 
-| s3Prefix | Amazon S3 prefix to check for existence of objects\. | String | 
+| s3Prefix | The Amazon S3 prefix to check for existence of objects\. | String | 
 
 
 ****  
@@ -40,7 +40,7 @@ The following is an example of this object type using required, optional, and ex
 | onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
 | preconditionTimeout | The period from start after which precondition is marked as failed if still not satisfied | Period | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progres for the specified period may be considered stalled and so retried\. | Period | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 
 
@@ -52,7 +52,7 @@ The following is an example of this object type using required, optional, and ex
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of depedency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | currentRetryCount | Number of times the precondition was tried in this attempt\. | String | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
@@ -61,10 +61,10 @@ The following is an example of this object type using required, optional, and ex
 | hadoopJobLog | Hadoop job logs available on attempts for EMR\-based activities\. | String | 
 | hostname | The host name of client that picked up the task attempt\. | String | 
 | lastRetryTime | Last time when the precondition was tried within this attempt\. | String | 
-| node | The node for which this precondition is being performed | Reference Object, e\.g\. "node":\{"ref":"myRunnableObjectId"\} | 
+| node | The node for which this precondition is being performed\. | Reference Object, e\.g\. "node":\{"ref":"myRunnableObjectId"\} | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object | DateTime | 
-| @scheduledStartTime | Schedule start time for object | DateTime | 
+| @scheduledEndTime | Schedule end time for object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for object\. | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version the object was created with\. | String | 
 | @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 

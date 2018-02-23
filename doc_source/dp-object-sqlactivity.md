@@ -23,7 +23,7 @@ The following is an example of this object type\.
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| database | The database on which to execute the supplied SQL script | Reference Object, e\.g\. "database":\{"ref":"myDatabaseId"\} | 
+| database | The database on which to run the supplied SQL script\. | Reference Object, e\.g\. "database":\{"ref":"myDatabaseId"\} | 
 
 
 ****  
@@ -38,7 +38,7 @@ The following is an example of this object type\.
 | Required Group \(One of the following is required\) | Description | Slot Type | 
 | --- | --- | --- | 
 | script | The SQL script to run\. You must specify script or scriptUri\. When the script is stored in Amazon S3, then script is not evaluated as an expression\. Specifying multiple values for scriptArgument is helpful when the script is stored in Amazon S3\. | String | 
-| scriptUri | A URI specifying the location of a SQL script to execute in this activity | String | 
+| scriptUri | A URI specifying the location of an SQL script to execute in this activity\. | String | 
 
 
 ****  
@@ -69,7 +69,7 @@ The following is an example of this object type\.
 | pipelineLogUri | The S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
 | queue | \[Amazon Redshift only\] Corresponds to the query\_group setting in Amazon Redshift, which allows you to assign and prioritize concurrent activities based on their placement in queues\. Amazon Redshift limits the number of simultaneous connections to 15\. For more information, see [Assigning Queries to Queues](http://docs.aws.amazon.com/redshift/latest/dg/cm-c-executing-queries.html) in the Amazon Redshift Database Developer Guide\. | String | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | scheduleType |  Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Values are: `cron`, `ondemand`, and `timeseries`\.  `timeseries` scheduling means instances are scheduled at the end of each interval\. `cron` scheduling means instances are scheduled at the beginning of each interval\.  An `ondemand` schedule allows you to run a pipeline one time per activation\. This means you do not have to clone or re\-create the pipeline to run it again\. If you use an `ondemand` schedule, it must be specified in the default object and must be the only `scheduleType` specified for objects in the pipeline\. To use `ondemand` pipelines, call the `ActivatePipeline` operation for each subsequent run\.  | Enumeration | 
 | scriptArgument | A list of variables for the script\. You can alternatively put expressions directly into the script field\. Multiple values for scriptArgument are helpful when the script is stored in Amazon S3\. Example: \#\{format\(@scheduledStartTime, "YY\-MM\-DD HH:MM:SS"\}\\n\#\{format\(plusPeriod\(@scheduledStartTime, "1 day"\), "YY\-MM\-DD HH:MM:SS"\} | String | 
@@ -83,7 +83,7 @@ The following is an example of this object type\.
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
@@ -110,6 +110,6 @@ The following is an example of this object type\.
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

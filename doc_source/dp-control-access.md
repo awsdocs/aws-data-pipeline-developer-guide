@@ -1,6 +1,6 @@
 # Controlling Access to Pipelines and Resources<a name="dp-control-access"></a>
 
-Your security credentials identify you to services in AWS and grant you unlimited use of your AWS resources, such as your AWS Data Pipeline pipelines\. You can use features of AWS Data Pipeline and AWS Identity and Access Management \(IAM\) to allow AWS Data Pipeline and other users to access your AWS Data Pipeline resources without sharing your security credentials\.
+Your security credentials identify you to services in AWS and grant you unlimited use of your AWS resources, such as your pipelines\. You can use features of AWS Data Pipeline and AWS Identity and Access Management \(IAM\) to allow AWS Data Pipeline and other users to access your AWS Data Pipeline resources without sharing your security credentials\.
 
 Organizations can share access to pipelines so that the individuals in that organization can develop and maintain them collaboratively\. However, for example, it might be necessary to do the following:
 

@@ -14,14 +14,18 @@ The following expression calls one of the AWS Data Pipeline functions\. For more
 
 Expressions can use fields of the current object where the expression exists, or fields of another object that is linked by a reference\.
 
-In the following example, the `filePath` field references the `id` field in the same object to form a file name\. The value of `filePath` evaluates to "s3://mybucket/ExampleDataNode\.csv"\. 
+A slot format consists of a creation time followed by the object creation time, such as `@S3BackupLocation_2018-01-31T11:05:33`\. 
+
+ You can also reference the exact slot ID specified in the pipeline definition, such as the slot ID of the Amazon S3 backup location\. To reference the slot ID, use `#{parent.@id}`\.
+
+In the following example, the `filePath` field references the `id` field in the same object to form a file name\. The value of `filePath` evaluates to "`s3://mybucket/ExampleDataNode.csv`"\. 
 
 ```
 {
   "id" : "ExampleDataNode",
   "type" : "S3DataNode",
   "schedule" : {"ref" : "ExampleSchedule"},
-  "filePath" : "s3://mybucket/#{id}.csv",
+  "filePath" : "s3://mybucket/#{parent.@id}.csv",
   "precondition" : {"ref" : "ExampleCondition"},
   "onFail" : {"ref" : "FailureNotify"}
 }
@@ -29,7 +33,9 @@ In the following example, the `filePath` field references the `id` field in the 
 
 To use a field that exists on another object linked by a reference, use the `node` keyword\. This keyword is only available with alarm and precondition objects\.
 
-Continuing with the previous example, an expression in an `SnsAlarm` can refer to the date and time range in a `Schedule`, because the `S3DataNode` references both\. Specifically, `FailureNotify`'s `message` field can use the `@scheduledStartTime` and `@scheduledEndTime` runtime fields from `ExampleSchedule`, because `ExampleDataNode`'s `onFail` field references `FailureNotify` and its `schedule` field references `ExampleSchedule`\.
+Continuing with the previous example, an expression in an `SnsAlarm` can refer to the date and time range in a `Schedule`, because the `S3DataNode` references both\.
+
+ Specifically, `FailureNotify`'s `message` field can use the `@scheduledStartTime` and `@scheduledEndTime` runtime fields from `ExampleSchedule`, because `ExampleDataNode`'s `onFail` field references `FailureNotify` and its `schedule` field references `ExampleSchedule`\.
 
 ```
 {  
@@ -42,7 +48,7 @@ Continuing with the previous example, an expression in an `SnsAlarm` can refer t
 ```
 
 **Note**  
-You can create pipelines that have dependencies, such as tasks in your pipeline that depend on the work of other systems or tasks\. If your pipeline requires certain resources, add those dependencies to the pipeline using preconditions that you associate with data nodes and tasks so your pipelines are easier to debug and more resilient\. Additionally, keep your dependencies within a single pipeline when possible, because cross\-pipeline troubleshooting is difficult\.
+You can create pipelines that have dependencies, such as tasks in your pipeline that depend on the work of other systems or tasks\. If your pipeline requires certain resources, add those dependencies to the pipeline using preconditions that you associate with data nodes and tasks\. This makes your pipelines easier to debug and more resilient\. Additionally, keep your dependencies within a single pipeline when possible, because cross\-pipeline troubleshooting is difficult\.
 
 ## Nested Expressions<a name="dp-datatype-nested"></a>
 

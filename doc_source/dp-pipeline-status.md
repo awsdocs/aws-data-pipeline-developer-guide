@@ -32,6 +32,9 @@ The pipeline is ready to be activated for the first time\.
 `RUNNING`  
 The resource is running and ready to receive work\.
 
+`SCHEDULED`  
+The resource is scheduled to run\.
+
 `SHUTTING_DOWN`  
 The resource is shutting down after successfully completing its work\.
 

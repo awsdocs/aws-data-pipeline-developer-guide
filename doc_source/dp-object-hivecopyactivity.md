@@ -107,8 +107,8 @@ The following example shows how to use `HiveCopyActivity` and `DynamoDBExportDat
 | postActivityTaskConfig | Post\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "postActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
 | preActivityTaskConfig | Pre\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "preActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progres for the specified period may be considered stalled and so retried\. | Period | 
-| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accomodate DynamoDB tables specified as inputs or outputs | Boolean | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
+| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs | Boolean | 
 | resizeClusterMaxInstances | A limit on the maximum number of instance that can be requested by the resize algorithm | Integer | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | scheduleType | Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Time Series Style Scheduling means instances are scheduled at the end of each interval and Cron Style Scheduling means instances are scheduled at the beginning of each interval\. An on\-demand schedule allows you to run a pipeline one time per activation\. This means you do not have to clone or re\-create the pipeline to run it again\. If you use an on\-demand schedule it must be specified in the default object and must be the only scheduleType specified for objects in the pipeline\. To use on\-demand pipelines, you simply call the ActivatePipeline operation for each subsequent run\. Values are: cron, ondemand, and timeseries\. | Enumeration | 
@@ -122,7 +122,7 @@ The following example shows how to use `HiveCopyActivity` and `DynamoDBExportDat
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of depedency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
@@ -149,9 +149,9 @@ The following example shows how to use `HiveCopyActivity` and `DynamoDBExportDat
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Object\. | String | 
 
 ## See Also<a name="hivecopyactivity-seealso"></a>
 

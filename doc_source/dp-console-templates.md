@@ -22,7 +22,7 @@ The AWS Data Pipeline console **Create Pipeline** page allows you to create and 
 
    If you choose to run the pipeline on a schedule:
 
-   1. For **Run every**, choose a period for the pipeline\. The start and end time must define an interval that's long enough to accommodate this period\.
+   1. <a name="step_lhz_vpf_vn"></a>For **Run every**, choose a period for the pipeline\. The start and end time must define an interval that's long enough to accommodate this period\.
 
    1. Choose a **Starting** time\. If you choose **on pipeline activation**, the pipeline uses the current activation time\.
 

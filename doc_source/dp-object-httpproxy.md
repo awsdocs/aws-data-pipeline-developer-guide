@@ -66,15 +66,15 @@ The following pipeline definition shows an HttpProxy object:
 }
 ```
 
-## Syntax<a name="w3ab1c27c17c11b7"></a>
+## Syntax<a name="httpproxy-slots"></a>
 
 
 ****  
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| hostname | Host of the proxy which clients will use to connect to AWS Services | String | 
-| port | Port of the proxy host which the clients will use to connect to AWS Services | String | 
+| hostname | Host of the proxy which clients will use to connect to AWS Services\. | String | 
+| port | Port of the proxy host which the clients will use to connect to AWS Services\. | String | 
 
 
 ****  
@@ -82,9 +82,9 @@ The following pipeline definition shows an HttpProxy object:
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
-| \*password | Password for proxy | String | 
+| \*password | Password for proxy\. | String | 
 | s3NoProxy | Disable the HTTP proxy when connecting to Amazon S3 | Boolean | 
-| username | Username for proxy | String | 
+| username | User name for proxy\. | String | 
 | windowsDomain | The Windows domain name for NTLM Proxy\. | String | 
 | windowsWorkgroup | The Windows workgroup name for NTLM Proxy\. | String | 
 
@@ -100,6 +100,6 @@ The following pipeline definition shows an HttpProxy object:
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

@@ -41,7 +41,7 @@ The following is an example of this object type\. This object references another
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
 | filePath | The path to the object in Amazon S3 as a URI, for example: s3://my\-bucket/my\-key\-for\-file\. You must provide either a filePath or directoryPath value\. These represent a folder and a file name\. Use the directoryPath value to accommodate multiple files in a directory\. | String | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
-| manifestFilePath | The Amazon S3 path to a manifest file in the format supported by Amazon Redshift\. AWS Data Pipeline uses the manifest file to copy the specified Amazon S3 files into the Amazon Redshift table\. This field is valid only when a RedShiftCopyActivity references the S3DataNode\. | String | 
+| manifestFilePath | The Amazon S3 path to a manifest file in the format supported by Amazon Redshift\. AWS Data Pipeline uses the manifest file to copy the specified Amazon S3 files into the table\. This field is valid only when a RedShiftCopyActivity references the S3DataNode\. | String | 
 | maxActiveInstances | The maximum number of concurrent active instances of a component\. Re\-runs do not count toward the number of active instances\. | Integer | 
 | maximumRetries | Maximum number attempt retries on failure | Integer | 
 | onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
@@ -50,7 +50,7 @@ The following is an example of this object type\. This object references another
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
 | pipelineLogUri | The S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set then remote activities that do not report progres for the specified period may be considered stalled and so retried\. | Period | 
+| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | runsOn | The computational resource to run the activity or command\. For example, an Amazon EC2 instance or Amazon EMR cluster\. | Reference Object, e\.g\. "runsOn":\{"ref":"myResourceId"\} | 
 | s3EncryptionType | Overrides the Amazon S3 encryption type\. Values are SERVER\_SIDE\_ENCRYPTION or NONE\. Server\-side encryption is enabled by default\.  | Enumeration | 
@@ -66,7 +66,7 @@ The following is an example of this object type\. This object references another
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 

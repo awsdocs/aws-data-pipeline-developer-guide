@@ -1,6 +1,6 @@
 # ShellScriptConfig<a name="dp-object-shellscriptconfig"></a>
 
-Use with an Activity to run a shell script for preActivityTaskConfig and postActivityTaskConfig\. This object is available for HadoopActivity, HiveActivity, HiveCopyActivity, and PigActivity\. You specify an S3 URI and a list of arguments for the script\.
+Use with an Activity to run a shell script for preActivityTaskConfig and postActivityTaskConfig\. This object is available for [HadoopActivity](dp-object-hadoopactivity.md), [HiveActivity](dp-object-hiveactivity.md), [HiveCopyActivity](dp-object-hivecopyactivity.md), and [PigActivity](dp-object-pigactivity.md)\. You specify an S3 URI and a list of arguments for the script\.
 
 ## Example<a name="shellscriptconfig-example"></a>
 
@@ -41,6 +41,6 @@ This object includes the following fields\.
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

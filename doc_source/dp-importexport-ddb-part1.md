@@ -1,6 +1,6 @@
 # Part One: Import Data into DynamoDB<a name="dp-importexport-ddb-part1"></a>
 
-The first part of this tutorial explains how to define an AWS Data Pipeline pipeline to retrieve data from a tab\-delimited file in Amazon S3 to populate a DynamoDB table, define the transformation steps, and create an Amazon EMR cluster to perform the work\. 
+The first part of this tutorial explains how to define an AWS Data Pipeline to retrieve data from a tab\-delimited file in Amazon S3 to populate a DynamoDB table, define the transformation steps, and create an Amazon EMR cluster to perform the work\. 
 
 
 + [Before You Begin](dp-importexport-ddb-prereq.md)
