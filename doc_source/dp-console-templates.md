@@ -28,7 +28,7 @@ The AWS Data Pipeline console **Create Pipeline** page allows you to create and 
 
    1. Choose an **Ending** time\. If you choose **never**, the pipeline runs indefinitely\.
 
-1. Select an option for **IAM Roles**\. If you select **Default**, Amazon DevPay assigns its own default roles\. You can optionally select **Custom** to choose other roles available to your account\. 
+1. Select an option for **IAM Roles**\. If you select **Default**, AWS Data Pipeline assigns its own default roles\. You can optionally select **Custom** to choose other roles available to your account\. 
 
 1. Click either **Edit in Architect** or **Activate**\.
 
