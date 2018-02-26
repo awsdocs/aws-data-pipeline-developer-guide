@@ -2,7 +2,7 @@
 
 The instructions in this section are for working manually with pipeline definition files using the AWS Data Pipeline command line interface \(CLI\)\. This is an alternative to designing a pipeline interactively using the AWS Data Pipeline console\.
 
-You can manually create pipeline definition files using any text editor that supports saving files using the UTF\-8 file format and submit the files using the AWS Data Pipeline command line interface\. 
+You can manually create pipeline definition files using any text editor that supports saving files using the UTF\-8 file format, and submit the files using the AWS Data Pipeline command line interface\. 
 
 AWS Data Pipeline also supports a variety of complex expressions and functions within pipeline definitions\. For more information, see [Pipeline Expressions and Functions](dp-expressions-functions.md)\. 
 

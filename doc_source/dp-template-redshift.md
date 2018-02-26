@@ -37,9 +37,9 @@ The following table describes how the script translates the data types:
 |  TINYINT UNSIGNED, TINYINT \(size\) UNSIGNED  | SMALLINT |  MySQL: 0 to 255 UNSIGNED\. The maximum number of digits may be specified in parentheses\. Amazon Redshift: INT2\. Signed two\-byte integer  | 
 |  SMALLINT, SMALLINT\(size\)  | SMALLINT |  MySQL: \-32768 to 32767 normal\. The maximum number of digits may be specified in parentheses\. Amazon Redshift: INT2\. Signed two\-byte integer  | 
 |  SMALLINT UNSIGNED, SMALLINT\(size\) UNSIGNED,  | INTEGER |  MySQL: 0 to 65535 UNSIGNED\*\. The maximum number of digits may be specified in parentheses Amazon Redshift: INT4\. Signed four\-byte integer  | 
-|  MEDIUMINT, MEDIUMINT\(size\)  | INTEGER |  MySQL: \-8388608 to 8388607\. The maximum number of digits may be specified in parentheses Amazon Redshift: INT4\. Signed four\-byte integer  | 
+|  MEDIUMINT, MEDIUMINT\(size\)  | INTEGER |  MySQL: 388608 to 8388607\. The maximum number of digits may be specified in parentheses Amazon Redshift: INT4\. Signed four\-byte integer  | 
 |  MEDIUMINT UNSIGNED, MEDIUMINT\(size\) UNSIGNED  |  INTEGER  |  MySQL: 0 to 16777215\. The maximum number of digits may be specified in parentheses Amazon Redshift: INT4\. Signed four\-byte integer  | 
-|  INT, INT\(size\)  | INTEGER |  MySQL: \-2147483648 to 2147483647 Amazon Redshift: INT4\. Signed four\-byte integer  | 
+|  INT, INT\(size\)  | INTEGER |  MySQL: 147483648 to 2147483647 Amazon Redshift: INT4\. Signed four\-byte integer  | 
 |  INT UNSIGNED, INT\(size\) UNSIGNED  | BIGINT |  MySQL: 0 to 4294967295 Amazon Redshift: INT8\. Signed eight\-byte integer  | 
 |  BIGINT BIGINT\(size\)  | BIGINT |  Amazon Redshift: INT8\. Signed eight\-byte integer  | 
 |  BIGINT UNSIGNED BIGINT\(size\) UNSIGNED  | VARCHAR\(20\*4\) |  MySQL: 0 to 18446744073709551615  Amazon Redshift: No native equivalent, so using char array\.  | 
@@ -47,7 +47,7 @@ The following table describes how the script translates the data types:
 |  DOUBLE\(size,d\)  | DOUBLE PRECISION |  The maximum number of digits may be specified in the size parameter\. The maximum number of digits to the right of the decimal point is specified in the d parameter\. Amazon Redshift: FLOAT8  | 
 | DECIMAL\(size,d\) |  DECIMAL\(size,d\)  |  A DOUBLE stored as a string, allowing for a fixed decimal point\. The maximum number of digits may be specified in the size parameter\. The maximum number of digits to the right of the decimal point is specified in the d parameter\. Amazon Redshift: No native equivalent\.  | 
 |  CHAR\(size\)  | VARCHAR\(size\*4\) |  Holds a fixed\-length string, which can contain letters, numbers, and special characters\. The fixed size is specified as the parameter in parentheses\. Can store up to 255 characters\. Right padded with spaces\. Amazon Redshift: CHAR data type does not support multibyte character so VARCHAR is used\. The maximum number of bytes per character is 4 according to [RFC3629](http://tools.ietf.org/html/rfc3629), which limits the character table to U\+10FFFF\.  | 
-| VARCHAR\(size\) | VARCHAR\(size\*4\) |  Can store up to 255 characters\. VARCHAR does not support the following invalid UTF\-8 code points: 0xD800 \- 0xDFFF, \(Byte sequences: ED A0 80 \- ED BF BF\), 0xFDD0 \- 0xFDEF, 0xFFFE, and 0xFFFF, \(Byte sequences: EF B7 90 \- EF B7 AF, EF BF BE, and EF BF BF\)  | 
+| VARCHAR\(size\) | VARCHAR\(size\*4\) |  Can store up to 255 characters\. VARCHAR does not support the following invalid UTF\-8 code points: 0xD800\- 0xDFFF, \(Byte sequences: ED A0 80\- ED BF BF\), 0xFDD0\- 0xFDEF, 0xFFFE, and 0xFFFF, \(Byte sequences: EF B7 90\- EF B7 AF, EF BF BE, and EF BF BF\)  | 
 | TINYTEXT | VARCHAR\(255\*4\) | Holds a string with a maximum length of 255 characters | 
 | TEXT | VARCHAR\(max\) |  Holds a string with a maximum length of 65,535 characters\.  | 
 | MEDIUMTEXT | VARCHAR\(max\) |  0 to 16,777,215 Chars  | 

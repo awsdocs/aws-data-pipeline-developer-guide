@@ -1,6 +1,14 @@
 # Staging Data and Tables with Pipeline Activities<a name="dp-concepts-staging"></a>
 
-AWS Data Pipeline can stage input and output data in your pipelines to make it easier to use certain activities, such as `ShellCommandActivity` and `HiveActivity`\. Data staging is when AWS Data Pipeline copies data from the input data node to the resource executing the activity, and similarly from the resource to the output data node\. The staged data on the Amazon EMR or Amazon EC2 resource is available by using special variables in the activity's shell commands or hive scripts\. Table staging is similar to data staging, except the staged data takes the form of database tables, specifically\. AWS Data Pipeline supports the following staging scenarios:
+AWS Data Pipeline can stage input and output data in your pipelines to make it easier to use certain activities, such as `ShellCommandActivity` and `HiveActivity`\. 
+
+Data staging enables you to copy data from the input data node to the resource executing the activity, and, similarly, from the resource to the output data node\. 
+
+The staged data on the Amazon EMR or Amazon EC2 resource is available by using special variables in the activity's shell commands or Hive scripts\. 
+
+Table staging is similar to data staging, except the staged data takes the form of database tables, specifically\. 
+
+AWS Data Pipeline supports the following staging scenarios:
 
 + Data staging with `ShellCommandActivity`
 
@@ -9,7 +17,7 @@ AWS Data Pipeline can stage input and output data in your pipelines to make it e
 + Table staging with Hive and staging\-unsupported data nodes
 
 **Note**  
-Staging only functions when the `stage` field is set to `true` on an activity, such as ShellCommandActivity\. For more information, see [ShellCommandActivity](dp-object-shellcommandactivity.md)\.
+Staging only functions when the `stage` field is set to `true` on an activity, such as `ShellCommandActivity`\. For more information, see [ShellCommandActivity](dp-object-shellcommandactivity.md)\.
 
 In addition, data nodes and activities can relate in four ways:
 

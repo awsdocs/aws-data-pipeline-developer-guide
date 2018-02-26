@@ -32,7 +32,7 @@ Complete the initial pipeline creation screen to create the pipeline definition\
 
    Templates provide common scenarios encountered in AWS Data Pipeline\. You can customize a template to fit your needs by filling out the associated parameter values\. 
 **Note**  
-If your existing pipeline definition contains more than one schedule, the schedule is not visible in the create pipeline page but you can continue to the Architect page to view your schedules\.
+If your existing pipeline definition contains more than one schedule, the schedule is not visible in the **Create Pipeline** page, but you can continue to the **Architect** page to view your schedules\.
 
 1. In **Pipeline Configuration**, if you choose to enable logging, select a bucket in Amazon S3 to store logs for this pipeline\.
 
