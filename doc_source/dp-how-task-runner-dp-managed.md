@@ -35,4 +35,6 @@
 }
 ```
 
+For information and examples of running this activity, see [EmrActivity](dp-object-emractivity.md)\.
+
  If you have multiple AWS Data Pipeline\-managed resources in a pipeline, Task Runner is installed on each of them, and they all poll AWS Data Pipeline for tasks to process\. 
