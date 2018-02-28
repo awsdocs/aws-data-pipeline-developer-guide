@@ -294,26 +294,26 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| attemptStatus | Most recently reported status from the remote activity\. | String | 
-| attemptTimeout | Timeout for remote work completion\. If set then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
+| attemptStatus | The most recently reported status from the remote activity\. | String | 
+| attemptTimeout | The timeout for remote work completion\. If set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
 | dependsOn | Specifies the dependency on another runnable object\. | Reference Object, e\.g\. "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun\. | Enumeration | 
 | input | The input data source\. | Reference Object, e\.g\. "input":\{"ref":"myDataNodeId"\} | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maxActiveInstances | The maximum number of concurrent active instances of a component\. Re\-runs do not count toward the number of active instances\. | Integer | 
-| maximumRetries | Maximum number attempt retries on failure | Integer | 
+| maximumRetries | The maximum number attempt retries on failure\. | Integer | 
 | onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
 | onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, e\.g\. "onLateAction":\{"ref":"myActionId"\} | 
 | onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
 | output | The output data source\. | Reference Object, e\.g\. "output":\{"ref":"myDataNodeId"\} | 
 | parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
-| pipelineLogUri | The S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
-| postActivityTaskConfig | Post\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "postActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
+| pipelineLogUri | The Amazon S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
+| postActivityTaskConfig | Post\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S33 and a list of arguments\. | Reference Object, e\.g\. "postActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
 | preActivityTaskConfig | Pre\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "preActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
-| reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
-| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs | Boolean | 
-| resizeClusterMaxInstances | A limit on the maximum number of instance that can be requested by the resize algorithm | Integer | 
+| reportProgressTimeout | The timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
+| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB data nodes specified as inputs or outputs\. If your activity uses a `DynamoDBDataNode` as either an input or output data node, and if you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.  | Boolean | 
+| resizeClusterMaxInstances | A limit on the maximum number of instances that can be requested by the resize algorithm\. | Integer | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | scheduleType | Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Time Series Style Scheduling means instances are scheduled at the end of each interval and Cron Style Scheduling means instances are scheduled at the beginning of each interval\. An on\-demand schedule allows you to run a pipeline one time per activation\. This means you do not have to clone or re\-create the pipeline to run it again\. If you use an on\-demand schedule it must be specified in the default object and must be the only scheduleType specified for objects in the pipeline\. To use on\-demand pipelines, you simply call the ActivatePipeline operation for each subsequent run\. Values are: cron, ondemand, and timeseries\. | Enumeration | 
 | scriptVariable | The arguments to pass to the Pig script\. You can use scriptVariable with script or scriptUri\. | String | 
@@ -329,7 +329,7 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
 | @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
-| emrStepLog | EMR step logs available only on EMR activity attempts | String | 
+| emrStepLog | Amazon EMR step logs available only on EMR activity attempts\. | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
 | errorStackTrace | The error stack trace if this object failed\. | String | 

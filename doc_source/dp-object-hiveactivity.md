@@ -53,14 +53,14 @@ The following is an example of this object type\. This object references three o
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
-| attemptTimeout | Timeout for remote work completion\. If set then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
+| attemptTimeout | Timeout for remote work completion\. If set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
 | dependsOn | Specify dependency on another runnable object\. | Reference Object, e\.g\. "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
 | hadoopQueue | The Hadoop scheduler queue name on which the job will be submitted\. | String | 
 | input | The input data source\. | Reference Object, e\.g\. "input":\{"ref":"myDataNodeId"\} | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maxActiveInstances | The maximum number of concurrent active instances of a component\. Re\-runs do not count toward the number of active instances\. | Integer | 
-| maximumRetries | Maximum number attempt retries on failure | Integer | 
+| maximumRetries | The maximum number of attempt retries on failure\. | Integer | 
 | onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
 | onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, e\.g\. "onLateAction":\{"ref":"myActionId"\} | 
 | onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
@@ -71,11 +71,11 @@ The following is an example of this object type\. This object references three o
 | preActivityTaskConfig | Pre\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "preActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
 | reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
-| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs | Boolean | 
-| resizeClusterMaxInstances | A limit on the maximum number of instance that can be requested by the resize algorithm | Integer | 
+| resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB data nodes specified as inputs or outputs\.  If your activity uses a `DynamoDBDataNode` as either an input or output data node, and if you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.  | Boolean | 
+| resizeClusterMaxInstances | A limit on the maximum number of instances that can be requested by the resize algorithm\. | Integer | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | scheduleType | Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Time Series Style Scheduling means instances are scheduled at the end of each interval and Cron Style Scheduling means instances are scheduled at the beginning of each interval\. An on\-demand schedule allows you to run a pipeline one time per activation\. This means you do not have to clone or re\-create the pipeline to run it again\. If you use an on\-demand schedule it must be specified in the default object and must be the only scheduleType specified for objects in the pipeline\. To use on\-demand pipelines, you simply call the ActivatePipeline operation for each subsequent run\. Values are: cron, ondemand, and timeseries\. | Enumeration | 
-| scriptVariable | Specifies script variables for Amazon EMR to pass to Hive while running a script\. For example, the following example script variables would pass a SAMPLE and FILTER\_DATE variable to Hive: SAMPLE=s3://elasticmapreduce/samples/hive\-ads and FILTER\_DATE=\#\{format\(@scheduledStartTime,'YYYY\-MM\-dd'\)\}% This field accepts multiple values and works with both script and scriptUri fields\. In addition, scriptVariable functions regardless of whether stage is set to true or false\. This field is especially useful to send dynamic values to Hive using AWS Data Pipeline expressions and functions\. | String | 
+| scriptVariable | Specifies script variables for Amazon EMR to pass to Hive while running a script\. For example, the following example script variables would pass a SAMPLE and FILTER\_DATE variable to Hive: SAMPLE=s3://elasticmapreduce/samples/hive\-ads and FILTER\_DATE=\#\{format\(@scheduledStartTime,'YYYY\-MM\-dd'\)\}%\. This field accepts multiple values and works with both script and scriptUri fields\. In addition, scriptVariable functions regardless of whether stage is set to true or false\. This field is especially useful to send dynamic values to Hive using AWS Data Pipeline expressions and functions\. | String | 
 | stage | Determines whether staging is enabled before or after running the script\. Not permitted with Hive 11, so use an Amazon EMR AMI version 3\.2\.0 or greater\. | Boolean | 
 
 
@@ -88,7 +88,7 @@ The following is an example of this object type\. This object references three o
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
 | @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
-| emrStepLog | EMR step logs available only on EMR activity attempts | String | 
+| emrStepLog | Amazon EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
 | errorStackTrace | The error stack trace if this object failed\. | String | 

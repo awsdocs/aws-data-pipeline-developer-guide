@@ -97,8 +97,8 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
 | preStepCommand | Shell scripts to be run before any steps are run\. To specify multiple scripts, up to 255, add multiple preStepCommand fields\. | String | 
 | reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
-| resizeClusterBeforeRunning |  Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs\.   If you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.   | Boolean | 
-| resizeClusterMaxInstances | A limit on the maximum number of instance that can be requested by the resize algorithm\. | Integer | 
+| resizeClusterBeforeRunning |  Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs\.   If your `EmrActivity` uses a `DynamoDBDataNode` as either an input or output data node, and if you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.   | Boolean | 
+| resizeClusterMaxInstances | A limit on the maximum number of instances that can be requested by the resize algorithm\. | Integer | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | scheduleType | Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Time Series Style Scheduling means instances are scheduled at the end of each interval and Cron Style Scheduling means instances are scheduled at the beginning of each interval\. An on\-demand schedule allows you to run a pipeline one time per activation\. This means you do not have to clone or re\-create the pipeline to run it again\. If you use an on\-demand schedule it must be specified in the default object and must be the only scheduleType specified for objects in the pipeline\. To use on\-demand pipelines, you simply call the ActivatePipeline operation for each subsequent run\. Values are: cron, ondemand, and timeseries\. | Enumeration | 
 | step | One or more steps for the cluster to run\. To specify multiple steps, up to 255, add multiple step fields\. Use comma\-separated arguments after the JAR name; for example, "s3://example\-bucket/MyWork\.jar,arg1,arg2,arg3"\. | String | 
@@ -113,7 +113,7 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
 | @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
-| emrStepLog | EMR step logs available only on EMR activity attempts | String | 
+| emrStepLog | Amazon EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
 | errorStackTrace | The error stack trace if this object failed\. | String | 
@@ -128,8 +128,8 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | @latestRunTime | Time the latest run for which the execution was scheduled\. | DateTime | 
 | @nextRunTime | Time of run to be scheduled next\. | DateTime | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object | DateTime | 
-| @scheduledStartTime | Schedule start time for object | DateTime | 
+| @scheduledEndTime | Schedule end time for object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for object\. | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version the object was created with\. | String | 
 | @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 
