@@ -1,6 +1,6 @@
 # Creating Pipelines Using Console Templates<a name="dp-console-templates"></a>
 
- The AWS Data Pipeline console provides several pre\-configured pipeline definitions, known as templates\. You can use templates to get started with AWS Data Pipeline quickly\. You can also create templates with parameterized values\. This allows you to specify pipeline objects with parameters and pre\-defined attributes\. You can then use a tool to create values for a specific purpose within the pipeline\. This allows you to reuse pipeline definitions with different values\. For more information, see [Creating a Pipeline Using Parameterized Templates](dp-custom-templates.md)\.
+ The AWS Data Pipeline console provides several pre\-configured pipeline definitions, known as templates\. You can use templates to get started with AWS Data Pipeline quickly\. You can also create templates with parametrized values\. This allows you to specify pipeline objects with parameters and pre\-defined attributes\. You can then use a tool to create values for a specific purpose within the pipeline\. This allows you to reuse pipeline definitions with different values\. For more information, see [Creating a Pipeline Using Parametrized Templates](dp-custom-templates.md)\.
 
 ## Initialize, Create, and Schedule a Pipeline<a name="dp-create-pipeline"></a>
 
@@ -37,25 +37,14 @@ The AWS Data Pipeline console **Create Pipeline** page allows you to create and 
 When you choose a template, the pipeline create page populates with the parameters specified in the pipeline definition, such as custom Amazon S3 directory paths, Amazon EC2 key pair names, database connection strings, and so on\. You can provide this information at pipeline creation and activation\. The following templates available in the console are also available for download from the Amazon S3 bucket: `s3://datapipeline-us-east-1/templates/`\.
 
 **Templates**
-
 + [Getting Started Using ShellCommandActivity](dp-template-gettingstartedshell.md)
-
 + [Run AWS CLI Command](dp-template-runawscli.md)
-
 + [Export DynamoDB Table to S3](dp-template-exportddbtos3.md)
-
 + [Import DynamoDB Backup Data from S3](dp-template-exports3toddb.md)
-
 + [Run Job on an Amazon EMR Cluster](dp-template-emr.md)
-
 + [Full Copy of Amazon RDS MySQL Table to Amazon S3](dp-template-copyrdstos3.md)
-
 + [Incremental Copy of Amazon RDS MySQL Table to Amazon S3](dp-template-incrementalcopyrdstos3.md) 
-
 + [Load S3 Data into Amazon RDS MySQL Table](dp-template-copys3tords.md)
-
 + [Full Copy of Amazon RDS MySQL Table to Amazon Redshift ](dp-template-redshiftrdsfull.md)
-
 + [Incremental Copy of an Amazon RDS MySQL Table to Amazon Redshift](dp-template-redshiftrdsincremental.md)
-
 + [Load Data from Amazon S3 into Amazon Redshift](dp-template-s3redshift.md)

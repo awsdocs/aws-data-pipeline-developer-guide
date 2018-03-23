@@ -4,11 +4,8 @@ Represents the configuration of an EMR cluster\. This object is used by [EmrActi
 <a name="emrcluster-schedulers"></a>
 **Schedulers**  
 Schedulers provide a way to specify resource allocation and job prioritization within a Hadoop cluster\. Administrators or users can choose a scheduler for various classes of users and applications\. A scheduler will possibly use queues to allocate resources to users and applications\. You set up those queues when you create the cluster\. You can then setup priority for certain types of work and user over others\. This provides for efficient use of cluster resources, while allowing more than one user to submit work to the cluster\. There are three types of scheduler available:
-
 + [FairScheduler](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/FairScheduler.html) — Attempts to schedule resources evenly over a significant period of time\.
-
 + [CapacityScheduler](https://hadoop.apache.org/docs/stable/hadoop-yarn/hadoop-yarn-site/CapacityScheduler.html) — Uses queues to allow cluster administrators to assign users to queues of varying priority and resource allocation\. 
-
 + Default — Used by the cluster, which could be configured by your site\.
 
 **Amazon EMR 2\.x, 3\.x vs\. 4\.x platforms**  
@@ -400,5 +397,4 @@ If you wish to set `visibleToAllUsers` to False, your role must have the proper 
 | @sphere | The place of an object in the lifecycle\. Component objects give rise to instance objects, which execute attempt objects\. | String | 
 
 ## See Also<a name="emrcluster-seealso"></a>
-
 + [EmrActivity](dp-object-emractivity.md)

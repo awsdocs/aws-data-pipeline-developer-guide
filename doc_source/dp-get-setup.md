@@ -2,7 +2,7 @@
 
 Before you use AWS Data Pipeline for the first time, complete the following tasks\.
 
-
+**Topics**
 + [Sign up for AWS](#dp-sign-up)
 + [Create the Required IAM Roles \(CLI or API Only\)](#dp-iam-roles-new)
 + [Assign a Managed Policy with PassRole to Predefined IAM Roles](#dp-iam-create-user-groups)
@@ -31,9 +31,7 @@ This might be unavailable in your browser if you previously signed into the AWS 
 AWS Data Pipeline requires IAM roles to determine what actions your pipelines can perform and what resources it can access\. Additionally, when your pipeline creates a resource, such as an EC2 instance or EMR cluster, IAM roles determine what actions your applications can perform and what resources they can access\.
 
 The AWS Data Pipeline console creates the following roles for you:
-
 + **DataPipelineDefaultRole** grants AWS Data Pipeline access to your AWS resources
-
 + **DataPipelineDefaultResourceRole** grants the applications on your EC2 instances access to your AWS resources
 
 If you have used AWS Data Pipeline previously and have existing versions of these IAM roles, you might need to update them\. For more information, see [Update Existing IAM Roles for AWS Data Pipeline](dp-iam-roles.md#dp-iam-existing-accounts)\.
@@ -97,7 +95,6 @@ In this task, you create a user group, and then attach a **AWSDataPipeline\_Full
 Instead of using the **AWSDataPipeline\_FullAccess** managed policy with two predefined roles for AWS Data Pipeline, you can create two kinds of custom roles for AWS Data Pipeline, and attach an inline policy that has `"Action":"iam:PassRole"` to each of the roles\. 
 
 Create these two types of custom roles: 
-
 + A custom role used to launch Amazon EMR clusters through AWS Data Pipeline\. This role may be similar to the predefined role **DataPipelineDefaultRole**, or it may have fewer permissions than the predefined role\. However, this custom role must have the **trust relationship** with the two services it uses, Amazon EMR and AWS Data Pipeline, as follows: 
 
   ```
@@ -108,7 +105,6 @@ Create these two types of custom roles:
    
         }
   ```
-
 + A custom role used to launch Amazon EC2 clusters through AWS Data Pipeline\. This role may be similar to the predefined role **DataPipelineDefaultResourceRole**, or it may have fewer permissions than the predefined role\. However, this custom role must have the **trust relationship** with the Amazon EC2 service, as follows:
 
   ```

@@ -2,7 +2,7 @@
 
 To change some aspect of one of your pipelines, you can update its pipeline definition\. After you change a pipeline that is running, you must re\-activate the pipeline for your changes to take effect\. In addition, you can re\-run one or more pipeline components\.
 
-
+**Topics**
 + [Limitations](#dp-edit-pipeline-limits)
 + [Editing a Pipeline Using the Console](#dp-edit-pipeline-console)
 + [Editing a Pipeline Using the AWS CLI](#dp-edit-pipeline-aws-cli)
@@ -10,15 +10,10 @@ To change some aspect of one of your pipelines, you can update its pipeline defi
 ## Limitations<a name="dp-edit-pipeline-limits"></a>
 
 Before you activate a pipeline, you can make any changes to it\. After you activate a pipeline, you can edit the pipeline with the following restrictions\. The changes you make apply to new runs of the pipeline objects after you save them and then activate the pipeline again\.
-
 + You can't remove an object
-
 + You can't change the schedule period of an existing object
-
 + You can't add, delete, or modify reference fields in an existing object
-
 + You can't reference an existing object in an output field of a new object
-
 + You can't change the scheduled start date of an object \(instead, activate the pipeline with a specific date and time\)
 
 ## Editing a Pipeline Using the Console<a name="dp-edit-pipeline-console"></a>

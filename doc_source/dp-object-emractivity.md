@@ -64,14 +64,14 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 
 | Object Invocation Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, e\.g\. "schedule":\{"ref":"myScheduleId"\} | 
+| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example, "schedule":\{"ref":"myScheduleId"\} | 
 
 
 ****  
 
 | Required Group \(One of the following is required\) | Description | Slot Type | 
 | --- | --- | --- | 
-| runsOn | EMR Cluster on which this job will run\. | Reference Object, e\.g\. "runsOn":\{"ref":"myEmrClusterId"\} | 
+| runsOn | EMR Cluster on which this job will run\. | Reference Object, for example, "runsOn":\{"ref":"myEmrClusterId"\} | 
 | workerGroup | The worker group\. This is used for routing tasks\. If you provide a runsOn value and workerGroup exists, workerGroup is ignored\. | String | 
 
 
@@ -81,20 +81,20 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
 | attemptTimeout | Timeout for remote work completion\. If set then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
-| dependsOn | Specify dependency on another runnable object\. | Reference Object, e\.g\. "dependsOn":\{"ref":"myActivityId"\} | 
+| dependsOn | Specify dependency on another runnable object\. | Reference Object, for example, "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
-| input | Location of the input data\. | Reference Object, e\.g\. "input":\{"ref":"myDataNodeId"\} | 
+| input | Location of the input data\. | Reference Object, for example, "input":\{"ref":"myDataNodeId"\} | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maxActiveInstances | The maximum number of concurrent active instances of a component\. Re\-runs do not count toward the number of active instances\. | Integer | 
 | maximumRetries | Maximum number attempt retries on failure | Integer | 
-| onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
-| onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, e\.g\. "onLateAction":\{"ref":"myActionId"\} | 
-| onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
-| output | Location of the output data\. | Reference Object, e\.g\. "output":\{"ref":"myDataNodeId"\} | 
-| parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
+| onFail | An action to run when current object fails\. | Reference Object, for example, "onFail":\{"ref":"myActionId"\} | 
+| onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, for example, "onLateAction":\{"ref":"myActionId"\} | 
+| onSuccess | An action to run when current object succeeds\. | Reference Object, for example, "onSuccess":\{"ref":"myActionId"\} | 
+| output | Location of the output data\. | Reference Object, for example, "output":\{"ref":"myDataNodeId"\} | 
+| parent | Parent of the current object from which slots will be inherited\. | Reference Object, for example, "parent":\{"ref":"myBaseObjectId"\} | 
 | pipelineLogUri | The S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
 | postStepCommand | Shell scripts to be run after all steps are finished\. To specify multiple scripts, up to 255, add multiple postStepCommand fields\. | String | 
-| precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
+| precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, for example, "precondition":\{"ref":"myPreconditionId"\} | 
 | preStepCommand | Shell scripts to be run before any steps are run\. To specify multiple scripts, up to 255, add multiple preStepCommand fields\. | String | 
 | reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | resizeClusterBeforeRunning |  Resize the cluster before performing this activity to accommodate DynamoDB tables specified as inputs or outputs\.   If your `EmrActivity` uses a `DynamoDBDataNode` as either an input or output data node, and if you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.   | Boolean | 
@@ -112,7 +112,7 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, for example, "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | Amazon EMR step logs available only on EMR activity attempts | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
@@ -128,11 +128,11 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | @latestRunTime | Time the latest run for which the execution was scheduled\. | DateTime | 
 | @nextRunTime | Time of run to be scheduled next\. | DateTime | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object\. | DateTime | 
-| @scheduledStartTime | Schedule start time for object\. | DateTime | 
+| @scheduledEndTime | Schedule end time for the object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for the object\. | DateTime | 
 | @status | The status of this object\. | String | 
-| @version | Pipeline version the object was created with\. | String | 
-| @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 
+| @version | Pipeline version that the object was created with\. | String | 
+| @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, for example, "waitingOn":\{"ref":"myRunnableObjectId"\} | 
 
 
 ****  
@@ -140,13 +140,10 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
+| @pipelineId | ID of the pipeline to which this object belongs\. | String | 
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
 
 ## See Also<a name="emractivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [CopyActivity](dp-object-copyactivity.md)
-
 + [EmrCluster](dp-object-emrcluster.md)

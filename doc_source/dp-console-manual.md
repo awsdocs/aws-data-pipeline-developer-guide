@@ -5,7 +5,7 @@ You can create a pipeline using the AWS Data Pipeline console without the assist
 **Prerequisites**  
 An Amazon S3 bucket for the file copy source and destination used in the procedure\. For more information, see [Create a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) in the *Amazon Simple Storage Service Getting Started Guide*\.
 
-
+**Topics**
 + [Create the Pipeline Definition](#dp-console-manual-create)
 + [Define Activities](#dp-console-manual-activity)
 + [Configure the Schedule](#dp-console-manual-schedule)

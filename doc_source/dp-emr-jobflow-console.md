@@ -2,7 +2,7 @@
 
 You can create a pipeline to launch a cluster to analyze web logs or perform analysis of scientific data\.
 
-
+**Topics**
 + [Create the Pipeline](#dp-emr-jobflow-define-objects-console)
 + [Save and Validate Your Pipeline](#dp-emr-jobflow-save-pipeline-console)
 + [Activate Your Pipeline](#dp-emr-jobflow-activate-pipeline-console)

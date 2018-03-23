@@ -225,7 +225,7 @@ Schedule from Parent reference
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| period | How often the pipeline should run\. The format is "N \[minutes|hours|days|weeks|months\]", where N is a number followed by one of the time specifiers\. For example, "15 minutes", runs the pipeline every 15 minutes\. The minimum period is 15 minutes and the maximum period is 3 years\. | Period | 
+| period | How often the pipeline should run\. The format is "N \[minutes\|hours\|days\|weeks\|months\]", where N is a number followed by one of the time specifiers\. For example, "15 minutes", runs the pipeline every 15 minutes\. The minimum period is 15 minutes and the maximum period is 3 years\. | Period | 
 
 
 ****  

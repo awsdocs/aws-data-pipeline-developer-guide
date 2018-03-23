@@ -79,5 +79,4 @@ The following is an example of this object type using required, optional, and ex
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
 
 ## See Also<a name="s3prefixnotempty-seealso"></a>
-
 + [ShellCommandPrecondition](dp-object-shellcommandprecondition.md)

@@ -1,21 +1,15 @@
 # CopyActivity<a name="dp-object-copyactivity"></a>
 
 Copies data from one location to another\. `CopyActivity` supports [S3DataNode](dp-object-s3datanode.md) and [SqlDataNode](dp-object-sqldatanode.md) as input and output and the copy operation is normally performed record\-by\-record\. However, `CopyActivity` provides a high\-performance Amazon S3 to Amazon S3 copy when all the following conditions are met:
-
 + The input and output are S3DataNodes
-
 + The `dataFormat` field is the same for input and output
 
 If you provide compressed data files as input and do not indicate this using the `compression` field on the S3 data nodes, `CopyActivity` might fail\. In this case, `CopyActivity` does not properly detect the end of record character and the operation fails\. Further, `CopyActivity` supports copying from a directory to another directory and copying a file to a directory, but record\-by\-record copy occurs when copying a directory to a file\. Finally, `CopyActivity` does not support copying multipart Amazon S3 files\. 
 
 `CopyActivity` has specific limitations to its CSV support\. When you use an S3DataNode as input for `CopyActivity`, you can only use a Unix/Linux variant of the CSV data file format for the Amazon S3 input and output fields\. The Unix/Linux variant requires the following: 
-
 + The separator must be the "," \(comma\) character\.
-
 + The records are not quoted\.
-
 + The default escape character is ASCII value 92 \(backslash\)\.
-
 + The end of record identifier is ASCII value 10 \(or "\\n"\)\.
 
 Windows\-based systems typically use a different end\-of\-record character sequence: a carriage return and line feed together \(ASCII value 13 and ASCII value 10\)\. You must accommodate this difference using an additional mechanism, such as a pre\-copy script to modify the input data, to ensure that `CopyActivity` can properly detect the end of a record; otherwise, the `CopyActivity` fails repeatedly\.
@@ -119,9 +113,6 @@ The following is an example of this object type\. This object references three o
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
 
 ## See Also<a name="copyactivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [EmrActivity](dp-object-emractivity.md)
-
 + [Export MySQL Data to Amazon S3 Using AWS Data Pipeline](dp-copydata-mysql.md)

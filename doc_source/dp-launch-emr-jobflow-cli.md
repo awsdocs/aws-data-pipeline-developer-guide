@@ -10,7 +10,7 @@ Before you can use the CLI, you must complete the following steps:
 
 1. Ensure that the IAM roles named **DataPipelineDefaultRole** and **DataPipelineDefaultResourceRole** exist\. The AWS Data Pipeline console creates these roles for you automatically\. If you haven't used the AWS Data Pipeline console at least once, then you must create these roles manually\. For more information, see [IAM Roles for AWS Data Pipeline](dp-iam-roles.md)\.
 
-
+**Topics**
 + [Creating the Pipeline Definition File](#streaming-cluster-json)
 + [Uploading and Activating the Pipeline Definition](#streaming-cluster-activate)
 + [Monitor the Pipeline Runs](#streaming-cluster-monitor)
@@ -55,11 +55,8 @@ Copy this code into a text file and save it as `MyEmrPipelineDefinition.json`\. 
 ```
 
  This pipeline has three objects:
-
 +  `Hourly`, which represents the schedule of the work\. You can set a schedule as one of the fields on an activity\. When you do, the activity runs according to that schedule, or in this case, hourly\. 
-
 +  `MyCluster`, which represents the set of Amazon EC2 instances used to run the cluster\. You can specify the size and number of EC2 instances to run as the cluster\. If you do not specify the number of instances, the cluster launches with two, a master node and a task node\. You can specify a subnet to launch the cluster into\. You can add additional configurations to the cluster, such as bootstrap actions to load additional software onto the Amazon EMR\-provided AMI\. 
-
 +  `MyEmrActivity`, which represents the computation to process with the cluster\. Amazon EMR supports several types of clusters, including streaming, Cascading, and Scripted Hive\. The `runsOn` field refers back to MyCluster, using that as the specification for the underpinnings of the cluster\.
 
 ## Uploading and Activating the Pipeline Definition<a name="streaming-cluster-activate"></a>

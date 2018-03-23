@@ -26,14 +26,14 @@ The following is an example of this object type\. This object references two oth
 
 | Required Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| tableName | The Amazon DynamoDB table\. | String | 
+| tableName | The DynamoDB table\. | String | 
 
 
 ****  
 
 | Object Invocation Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, e\.g\. "schedule":\{"ref":"myScheduleId"\} | 
+| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [Schedule](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html)\. | Reference Object, for example, "schedule":\{"ref":"myScheduleId"\} | 
 
 
 ****  
@@ -41,8 +41,8 @@ The following is an example of this object type\. This object references two oth
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | attemptStatus | Most recently reported status from the remote activity\. | String | 
-| attemptTimeout | Timeout for remote work completion\. If set then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
-| dataFormat | DataFormat for the data described by this data node\. Currently supported for HiveActivity and HiveCopyActivity\. | Reference Object, e\.g\. "dataFormat":\{"ref":"myDynamoDBDataFormatId"\} | 
+| attemptTimeout | Timeout for remote work completion\. If this field is set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
+| dataFormat | DataFormat for the data described by this data node\. Currently supported for HiveActivity and HiveCopyActivity\. | Reference Object, "dataFormat":\{"ref":"myDynamoDBDataFormatId"\} | 
 | dependsOn | Specify dependency on another runnable object | Reference Object, e\.g\. "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 

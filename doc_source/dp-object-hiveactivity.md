@@ -119,7 +119,5 @@ The following is an example of this object type\. This object references three o
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="hiveactivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [EmrActivity](dp-object-emractivity.md)

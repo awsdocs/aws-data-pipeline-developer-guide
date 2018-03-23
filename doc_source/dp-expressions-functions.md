@@ -6,7 +6,7 @@ This section explains the syntax for using expressions and functions in pipeline
 
 The following types of data can be set as field values\.
 
-
+**Topics**
 + [DateTime](#dp-datatype-datetime)
 + [Numeric](#dp-datatype-numeric)
 + [Object References](#dp-datatype-object-reference)
@@ -31,7 +31,7 @@ An object in the pipeline definition\. This can either be the current object, th
 
 ### Period<a name="dp-datatype-period"></a>
 
- Indicates how often a scheduled event should run\. It's expressed in the format "*N* \[`years`|`months`|`weeks`|`days`|`hours`|`minutes`\]", where *N* is a positive integer value\. 
+ Indicates how often a scheduled event should run\. It's expressed in the format "*N* \[`years`\|`months`\|`weeks`\|`days`\|`hours`\|`minutes`\]", where *N* is a positive integer value\. 
 
 The minimum period is 15 minutes and the maximum period is 3 years\.
 

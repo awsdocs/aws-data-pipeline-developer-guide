@@ -109,5 +109,4 @@ The following is an example of this object type\. This object references two oth
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="mysqldatanode-seealso"></a>
-
 + [S3DataNode](dp-object-s3datanode.md)

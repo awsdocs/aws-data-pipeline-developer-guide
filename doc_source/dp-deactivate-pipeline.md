@@ -6,7 +6,7 @@ When you deactivate a pipeline, you can specify what happens to running activiti
 
 When you activate a deactivated pipeline, you can specify when it resumes\. For example, using the AWS Management Console, you can resume after the last completed run, from the current time, or from a specified date and time\. Using the AWS CLI or the API, the pipeline resumes from the last completed execution by default, or you can specify the date and time to resume the pipeline\.
 
-
+**Topics**
 + [Deactivate Your Pipeline Using the Console](#dp-deactivate-pipeline-console)
 + [Deactivate Your Pipeline Using the AWS CLI](#dp-deactivate-pipeline-cli)
 

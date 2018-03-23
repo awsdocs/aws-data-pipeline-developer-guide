@@ -2,7 +2,7 @@
 
 This is the second of a two\-part tutorial that demonstrates how to bring together multiple AWS features to solve real\-world problems in a scalable way through a common scenario: moving schema\-less data in and out of DynamoDB using AWS Data Pipeline\. 
 
-
+**Topics**
 + [Before You Begin](dp-importexport-ddb-prereq2.md)
 + [Step 1: Create the Pipeline](dp-importexport-ddb-console-start2.md)
 + [Step 2: Save and Validate Your Pipeline](dp-export-ddb-save-pipeline-console.md)

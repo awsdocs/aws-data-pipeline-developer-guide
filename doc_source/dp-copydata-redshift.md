@@ -8,7 +8,7 @@ Amazon Redshift is a data warehouse service in the cloud\. For more information,
 
 This tutorial has several prerequisites\. After completing the following steps, you can continue the tutorial using either the console or the CLI\.
 
-
+**Topics**
 + [Before You Begin: Configure COPY Options and Load Data](dp-learn-copy-redshift.md)
 + [Set up Pipeline, Create a Security Group, and Create an Amazon Redshift Cluster](dp-copydata-redshift-prereq.md)
 + [Copy Data to Amazon Redshift Using the AWS Data Pipeline Console](dp-copydata-redshift-create.md)

@@ -79,7 +79,5 @@ The following is an example of this object type\.
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
 
 ## See Also<a name="shellcommandprecondition-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [Exists](dp-object-exists.md)

@@ -1,11 +1,8 @@
 # DynamoDBExportDataFormat<a name="dp-object-dynamodbexportdataformat"></a>
 
 Applies a schema to an DynamoDB table to make it accessible by a Hive query\. Use `DynamoDBExportDataFormat` with a `HiveCopyActivity` object and `DynamoDBDataNode` or `S3DataNode` input and output\. `DynamoDBExportDataFormat` has the following benefits: 
-
 + Provides both DynamoDB and Amazon S3 support
-
 + Allows you to filter data by certain columns in your Hive query
-
 + Exports all attributes from DynamoDB even if you have a sparse schema
 
 **Note**  

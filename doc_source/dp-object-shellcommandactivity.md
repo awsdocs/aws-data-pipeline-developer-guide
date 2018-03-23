@@ -118,7 +118,5 @@ The following is an example of this object type\.
 | @sphere | The place of an object in the lifecycle\. Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="shellcommandactivity-seealso"></a>
-
 + [CopyActivity](dp-object-copyactivity.md)
-
 + [EmrActivity](dp-object-emractivity.md)

@@ -154,7 +154,5 @@ The following example shows how to use `HiveCopyActivity` and `DynamoDBExportDat
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Object\. | String | 
 
 ## See Also<a name="hivecopyactivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [EmrActivity](dp-object-emractivity.md)

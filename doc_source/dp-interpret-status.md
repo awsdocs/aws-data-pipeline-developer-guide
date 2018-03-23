@@ -43,7 +43,7 @@ The resource is scheduled to run\.
 The resource is shutting down after successfully completing its work\.
 
 `SKIPPED`  
-The component skipped intervals of execution after the pipeline was activated using a timestamp that is later than the current schedule\.
+The component skipped intervals of execution after the pipeline was activated using a time stamp that is later than the current schedule\.
 
 `TIMEDOUT`  
 The resource exceeded the `terminateAfter` threshold and was stopped by AWS Data Pipeline\. After the resource reaches this status, AWS Data Pipeline ignores the `actionOnResourceFailure`, `retryDelay`, and `retryTimeout` values for that resource\. This status applies only to resources\.

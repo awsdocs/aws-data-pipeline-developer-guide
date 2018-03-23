@@ -67,28 +67,25 @@ This object includes the following fields\.
 
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
+| parent | Parent of the current object from which slots are inherited\. | Reference Object, for example, "parent":\{"ref":"myBaseObjectId"\} | 
 
 
 ****  
 
 | Runtime Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @version | Pipeline version the object was created with\. | String | 
+| @version | Pipeline version that the object was created with\. | String | 
 
 
 ****  
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | ID of the pipeline to which this object belongs\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects, which execute Attempt Objects\. | String | 
 
 ## See Also<a name="property-seealso"></a>
-
 + [EmrCluster](dp-object-emrcluster.md)
-
 + [EmrConfiguration](dp-object-emrconfiguration.md)
-
 + [Amazon EMR Release Guide](http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/)

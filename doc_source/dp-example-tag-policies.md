@@ -2,7 +2,7 @@
 
 The following examples demonstrate how to grant users full or restricted access to pipelines\.
 
-
+**Topics**
 + [Example 1: Grant users read\-only access based on a tag](#ex1)
 + [Example 2: Grant users full access based on a tag](#ex2)
 + [Example 3: Grant the pipeline owner full access](#ex3)

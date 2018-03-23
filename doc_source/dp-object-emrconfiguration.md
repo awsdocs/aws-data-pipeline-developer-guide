@@ -65,7 +65,7 @@ The corresponding pipeline object definition uses a EmrConfiguration object and 
 }
 ```
 
-The following example is a nested configuration used to set the Hadoop environment with the `hadoop-env` classfication:
+The following example is a nested configuration used to set the Hadoop environment with the `hadoop-env` classification:
 
 ```
 [
@@ -165,9 +165,6 @@ This object includes the following fields\.
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
 
 ## See Also<a name="emrconfiguration-seealso"></a>
-
 + [EmrCluster](dp-object-emrcluster.md)
-
 + [Property](dp-object-property.md)
-
 + [Amazon EMR Release Guide](http://docs.aws.amazon.com/ElasticMapReduce/latest/ReleaseGuide/)

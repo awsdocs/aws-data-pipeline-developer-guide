@@ -5,7 +5,7 @@ You can administer, create, and modify pipelines using the AWS Data Pipeline con
 **Important**  
 Before you begin, see [Setting up for AWS Data Pipeline](dp-get-setup.md)\.
 
-
+**Topics**
 + [Scheduling Pipelines](dp-concepts-schedules.md)
 + [Creating a Pipeline](dp-creating-pipelines.md)
 + [Viewing Your Pipelines](dp-list-pipelines.md)

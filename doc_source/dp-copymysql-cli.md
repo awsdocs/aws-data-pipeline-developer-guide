@@ -12,7 +12,7 @@ Before you begin, you must complete the following steps:
 
 1. Set up an Amazon S3 bucket and an Amazon RDS instance\. For more information, see [Before You Begin](dp-copydata-mysql-prereq.md)\.
 
-
+**Topics**
 + [Define a Pipeline in JSON Format](#dp-copymysql-define-pipeline-cli)
 + [Upload and Activate the Pipeline Definition](#dp-copymysql-json-upload-cli)
 

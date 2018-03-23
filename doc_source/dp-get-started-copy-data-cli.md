@@ -10,7 +10,7 @@ Before you begin, you must complete the following steps:
 
 1. Ensure that the IAM roles named **DataPipelineDefaultRole** and **DataPipelineDefaultResourceRole** exist\. The AWS Data Pipeline console creates these roles for you automatically\. If you haven't used the AWS Data Pipeline console at least once, then you must create these roles manually\. For more information, see [IAM Roles for AWS Data Pipeline](dp-iam-roles.md)\.
 
-
+**Topics**
 + [Define a Pipeline in JSON Format](#dp-copy-define-pipeline-cli)
 + [Upload and Activate the Pipeline Definition](#dp-copy-json-upload-cli)
 

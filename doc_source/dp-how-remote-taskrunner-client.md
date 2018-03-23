@@ -9,9 +9,7 @@ The following diagram illustrates how AWS Data Pipeline and a task runner intera
 ![\[AWS Data Pipeline task lifecycle\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/images/dp-task-lifecycle.png)
 
 There are two ways you can use Task Runner to process your pipeline: 
-
 +  AWS Data Pipeline installs Task Runner for you on resources that are launched and managed by the AWS Data Pipeline web service\. 
-
 +  You install Task Runner on a computational resource that you manage, such as a long\-running EC2 instance, or an on\-premises server\.
 
 For more information about working with Task Runner, see [Working with Task Runner](dp-using-task-runner.md)\.

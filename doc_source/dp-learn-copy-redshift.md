@@ -1,9 +1,7 @@
 # Before You Begin: Configure COPY Options and Load Data<a name="dp-learn-copy-redshift"></a>
 
 Before copying data to Amazon Redshift within AWS Data Pipeline, ensure that you: 
-
 + Load data from Amazon S3\.
-
 + Set up the `COPY` activity in Amazon Redshift\. 
 
 Once you have these options working and successfully complete a data load, transfer these options to AWS Data Pipeline, for performing the copying within it\.

@@ -35,7 +35,7 @@ By default, the object uses the Postgres driver, which requires the `clusterId` 
 | Required Group \(One of the following is required\) | Description | Slot Type | 
 | --- | --- | --- | 
 | clusterId | The identifier provided by the user when the Amazon Redshift cluster was created\. For example, if the endpoint for your Amazon Redshift cluster is mydb\.example\.us\-east\-1\.redshift\.amazonaws\.com, the correct identifier is mydb\. In the Amazon Redshift console, you can get this value from Cluster Identifier or Cluster Name\. | String | 
-| connectionString | The JDBC endpoint for connecting to an Amazon Redshift instance owned by an account different than the pipeline\. Note that you can't specify both connectionString and clusterId\. | String | 
+| connectionString | The JDBC endpoint for connecting to an Amazon Redshift instance owned by an account different than the pipeline\. You can't specify both connectionString and clusterId\. | String | 
 
 
 ****  
@@ -43,8 +43,8 @@ By default, the object uses the Postgres driver, which requires the `clusterId` 
 | Optional Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | databaseName | Name of the logical database to attach to\. | String | 
-| jdbcProperties | Pairs of the form A=B that will be set as properties on JDBC connections for this database | String | 
-| parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
+| jdbcProperties | Pairs of the form A=B to be set as properties on JDBC connections for this database\. | String | 
+| parent | Parent of the current object from which slots are inherited\. | Reference Object, for example, "parent":\{"ref":"myBaseObjectId"\} | 
 | region | The code for the region where the database exists\. For example, us\-east\-1\. | Enumeration | 
 
 
@@ -52,7 +52,7 @@ By default, the object uses the Postgres driver, which requires the `clusterId` 
 
 | Runtime Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @version | Pipeline version the object was created with\. | String | 
+| @version | Pipeline version that the object was created with\. | String | 
 
 
 ****  
@@ -60,5 +60,5 @@ By default, the object uses the Postgres driver, which requires the `clusterId` 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | @error | Error describing the ill\-formed object\. | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @pipelineId | ID of the pipeline to which this object belongs\. | String | 
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

@@ -1,3 +1,3 @@
 # Using Task Runner with a Proxy<a name="dp-taskrunner-proxy"></a>
 
-If you are using a proxy host, you can either specify its [configuration](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-taskrunner-config-options.html) when invoking Task Runner or set the environment variable, HTTPS\_PROXY\. The environment variable used with Task Runner will accept the same configuration used for the [AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-http-proxy.html)\. 
+If you are using a proxy host, you can either specify its [configuration](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-taskrunner-config-options.html) when invoking Task Runner or set the environment variable, HTTPS\_PROXY\. The environment variable used with Task Runner accepts the same configuration used for the [AWS Command Line Interface](http://docs.aws.amazon.com/cli/latest/userguide/cli-http-proxy.html)\. 

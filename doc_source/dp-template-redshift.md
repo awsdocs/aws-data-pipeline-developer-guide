@@ -1,29 +1,19 @@
 # Amazon RDS to Amazon Redshift Templates<a name="dp-template-redshift"></a>
 
 The following two templates copy tables from Amazon RDS MySQL to Amazon Redshift using a translation script, which creates an Amazon Redshift table using the source table schema with the following caveats: 
-
 + If a distribution key is not specified, the first primary key from the Amazon RDS table is set as the distribution key\.
-
 + You cannot skip a column that is present in an Amazon RDS MySQL table when you are doing a copy to Amazon Redshift\.
-
 + \(Optional\) You can provide an Amazon RDS MySQL to Amazon Redshift column data type mapping as one of the parameters in the template\. If this is specified, the script uses this to create the Amazon Redshift table\.
 
 If the `Overwrite_Existing` Amazon Redshift insert mode is being used:
-
 + If a distribution key is not provided, a primary key on the Amazon RDS MySQL table is used\.
-
 + If there are composite primary keys on the table, the first one is used as the distribution key if the distribution key is not provided\. Only the first composite key is set as the primary key in the Amazon Redshift table\.
-
 + If a distribution key is not provided and there is no primary key on the Amazon RDS MySQL table, the copy operation fails\.
 
 For more information about Amazon Redshift, see the following topics:
-
 + [Amazon Redshift Cluster](http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html)
-
 + Amazon Redshift [COPY](http://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html)
-
 + [Distribution styles](http://docs.aws.amazon.com/redshift/latest/dg/c_choosing_dist_sort.html) and DISTKEY [examples](http://docs.aws.amazon.com/redshift/latest/dg/c_Distribution_examples.html)
-
 + [Sort Keys](http://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html)
 
 The following table describes how the script translates the data types:

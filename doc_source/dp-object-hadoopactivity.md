@@ -71,9 +71,7 @@ The following EmrCluster configures CapacityScheduler for Hadoop 2\-based AMIs:
 
 **HadoopActivity using an existing EMR cluster**  
 In this example, you use workergroups and a TaskRunner to run a program on an existing EMR cluster\. The following pipeline definition uses HadoopActivity to: 
-
 + Run a MapReduce program only on *myWorkerGroup* resources\. For more information about worker groups, see [Executing Work on Existing Resources Using Task Runner](dp-how-task-runner-user-managed.md)\.
-
 + Run a preActivityTaskConfig and postActivityTaskConfig
 
 ```
@@ -240,9 +238,6 @@ In this example, you use workergroups and a TaskRunner to run a program on an ex
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="hadoopactivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [CopyActivity](dp-object-copyactivity.md)
-
 + [EmrCluster](dp-object-emrcluster.md)

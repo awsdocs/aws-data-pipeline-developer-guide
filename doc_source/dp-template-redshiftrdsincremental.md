@@ -11,15 +11,9 @@ This template copies changes that are made to the Amazon RDS MySQL table between
 When you use the default template to create pipelines for incremental Amazon RDS copy, an activity with the default name `RDSToS3CopyActivity` is created\. You can rename it\.
 
 The template uses the following pipeline objects:
-
 + [CopyActivity](dp-object-copyactivity.md)
-
 + [RedshiftCopyActivity](dp-object-redshiftcopyactivity.md)
-
 + [S3DataNode](dp-object-s3datanode.md)
-
 + [SqlDataNode](dp-object-sqldatanode.md)
-
 + [RedshiftDataNode](dp-object-redshiftdatanode.md)
-
 + [RedshiftDatabase](dp-object-redshiftdatabase.md)

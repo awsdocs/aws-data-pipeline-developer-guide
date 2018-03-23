@@ -4,11 +4,13 @@ If an `EMRCluster` or `EMRActivity` fails and the error information provided by 
 
 **To see more detailed Amazon EMR error information**
 
-1. In the AWS Data Pipeline console, click the triangle next to the pipeline instance, to expand the instance details\. Select **View execution details**, and then click the triangle next to the component\.
+1. In the AWS Data Pipeline console, select the triangle next to the pipeline instance, to expand the instance details\. 
 
-1.  in the **Details** column, click **More\.\.\.**\. The information screen opens listing the details of the component\. Locate and copy the **instanceParent** value from the screen, such as: `@EmrActivityId_xiFDD_2017-09-30T21:40:13` 
+1. Choose **View execution details** and select the triangle next to the component\.
 
-1. Navigate to the Amazon EMR console and search for a cluster with the matching **instanceParent** value in its name and click **Debug**\. 
+1. In the **Details** column, choose **More\.\.\.**\. The information screen opens listing the details of the component\. Locate and copy the **instanceParent** value from the screen, such as: `@EmrActivityId_xiFDD_2017-09-30T21:40:13` 
+
+1. Navigate to the Amazon EMR console, search for a cluster with the matching **instanceParent** value in its name, and then choose **Debug**\. 
 **Note**  
 For the **Debug** button to function, your pipeline definition must have set the EmrActivity `enableDebugging` option to `true` and the `EmrLogUri` option to a valid path\.
 

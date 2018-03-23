@@ -3,9 +3,7 @@
 AWS Data Pipeline allows you to configure the way pipeline objects behave when a dependency fails or is canceled by a user\. You can ensure that failures cascade to other pipeline objects \(consumers\), to prevent indefinite waiting\. All activities, data nodes, and preconditions have a field named `failureAndRerunMode` with a default value of `none`\. To enable cascading failures, set the `failureAndRerunMode` field to `cascade`\. 
 
 When this field is enabled, cascade failures occur if a pipeline object is blocked in the `WAITING_ON_DEPENDENCIES` state and any dependencies have failed with no pending command\. During a cascade failure, the following events occur:
-
 + When an object fails, its consumers are set to `CASCADE_FAILED` and both the original object and its consumers' preconditions are set to `CANCELED`\.
-
 + Any objects that are already `FINISHED`, `FAILED`, or `CANCELED` are ignored\.
 
 Cascade failure does not operate on a failed object's dependencies \(upstream\), except for preconditions associated with the original failed object\. Pipeline objects affected by a cascade failure may trigger any retries or post\-actions, such as `onFail`\.
@@ -27,11 +25,8 @@ If the objects that depend on a resource are in the `FAILED` state and the resou
 ## Rerunning Cascade\-Failed Objects<a name="dp-manage-cascade-rerun"></a>
 
 By default, rerunning any activity or data node only reruns the associated resource\. However, setting the `failureAndRerunMode` field to `cascade` on a pipeline object allows a rerun command on a target object to propagate to all consumers, under the following conditions: 
-
 + The target object's consumers are in the `CASCADE_FAILED` state\.
-
 + The target object's dependencies have no rerun commands pending\.
-
 + The target object's dependencies are not in the `FAILED`, `CASCADE_FAILED`, or `CANCELED` state\.
 
 If you attempt to rerun a `CASCADE_FAILED` object and any of its dependencies are `FAILED`, `CASCADE_FAILED`, or `CANCELED`, the rerun will fail and return the object to the `CASCADE_FAILED` state\. To successfully rerun the failed object, you must trace the failure up the dependency chain to locate the original source of failure and rerun that object instead\. When you issue a rerun command on a resource, you also attempt to rerun any objects that depend on it\. 

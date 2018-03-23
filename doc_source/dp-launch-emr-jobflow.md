@@ -20,7 +20,7 @@ Start date, time, and the duration for this activity\. You can optionally specif
 [SnsAlarm](dp-object-snsalarm.md)  
 Sends an Amazon SNS notification to the topic you specify after the task finishes successfully\. 
 
-
+**Topics**
 + [Before You Begin](dp-emr-jobflow-prereq.md)
 + [Launch a Cluster Using the AWS Data Pipeline Console](dp-emr-jobflow-console.md)
 + [Launch a Cluster Using the Command Line](dp-launch-emr-jobflow-cli.md)

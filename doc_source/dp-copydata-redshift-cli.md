@@ -16,6 +16,6 @@ Before you begin, you must complete the following steps:
 
 1. Set up an Amazon Redshift database\. For more information, see [Set up Pipeline, Create a Security Group, and Create an Amazon Redshift Cluster](dp-copydata-redshift-prereq.md)\.
 
-
+**Topics**
 + [Define a Pipeline in JSON Format](dp-copydata-redshift-define-pipeline-cli.md)
 + [Upload and Activate the Pipeline Definition](dp-copydata-redshift-upload-cli.md)

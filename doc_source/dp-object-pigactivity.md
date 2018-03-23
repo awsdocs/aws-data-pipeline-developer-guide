@@ -5,13 +5,9 @@ PigActivity provides native support for Pig scripts in AWS Data Pipeline without
 ## Example<a name="pigactivity-example"></a>
 
 The following example pipeline shows how to use `PigActivity`\. The example pipeline performs the following steps:
-
 + MyPigActivity1 loads data from Amazon S3 and runs a Pig script that selects a few columns of data and uploads it to Amazon S3\.
-
 + MyPigActivity2 loads the first output, selects a few columns and three rows of data, and uploads it to Amazon S3 as a second output\.
-
 + MyPigActivity3 loads the second output data, inserts two rows of data and only the column named "fifth" to Amazon RDS\.
-
 + MyPigActivity4 loads Amazon RDS data, selects the first row of data, and uploads it to Amazon S3\.
 
 ```
@@ -271,7 +267,7 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 
 | Object Invocation Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, e\.g\. "schedule":\{"ref":"myScheduleId"\} | 
+| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example, "schedule":\{"ref":"myScheduleId"\} | 
 
 
 ****  
@@ -286,7 +282,7 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 
 | Required Group \(One of the following is required\) | Description | Slot Type | 
 | --- | --- | --- | 
-| runsOn | EMR Cluster on which this PigActivity runs\. | Reference Object, e\.g\. "runsOn":\{"ref":"myEmrClusterId"\} | 
+| runsOn | EMR Cluster on which this PigActivity runs\. | Reference Object, for example, "runsOn":\{"ref":"myEmrClusterId"\} | 
 | workerGroup | The worker group\. This is used for routing tasks\. If you provide a runsOn value and workerGroup exists, workerGroup is ignored\. | String | 
 
 
@@ -296,21 +292,21 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 | --- | --- | --- | 
 | attemptStatus | The most recently reported status from the remote activity\. | String | 
 | attemptTimeout | The timeout for remote work completion\. If set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
-| dependsOn | Specifies the dependency on another runnable object\. | Reference Object, e\.g\. "dependsOn":\{"ref":"myActivityId"\} | 
+| dependsOn | Specifies the dependency on another runnable object\. | Reference Object, for example, "dependsOn":\{"ref":"myActivityId"\} | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun\. | Enumeration | 
-| input | The input data source\. | Reference Object, e\.g\. "input":\{"ref":"myDataNodeId"\} | 
+| input | The input data source\. | Reference Object, for example, "input":\{"ref":"myDataNodeId"\} | 
 | lateAfterTimeout | The elapsed time after pipeline start within which the object must start\. It is triggered only when the schedule type is not set to ondemand\. | Period | 
 | maxActiveInstances | The maximum number of concurrent active instances of a component\. Re\-runs do not count toward the number of active instances\. | Integer | 
 | maximumRetries | The maximum number attempt retries on failure\. | Integer | 
-| onFail | An action to run when current object fails\. | Reference Object, e\.g\. "onFail":\{"ref":"myActionId"\} | 
-| onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, e\.g\. "onLateAction":\{"ref":"myActionId"\} | 
-| onSuccess | An action to run when current object succeeds\. | Reference Object, e\.g\. "onSuccess":\{"ref":"myActionId"\} | 
-| output | The output data source\. | Reference Object, e\.g\. "output":\{"ref":"myDataNodeId"\} | 
-| parent | Parent of the current object from which slots will be inherited\. | Reference Object, e\.g\. "parent":\{"ref":"myBaseObjectId"\} | 
+| onFail | An action to run when current object fails\. | Reference Object, for example, "onFail":\{"ref":"myActionId"\} | 
+| onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, for example, "onLateAction":\{"ref":"myActionId"\} | 
+| onSuccess | An action to run when current object succeeds\. | Reference Object, for example, "onSuccess":\{"ref":"myActionId"\} | 
+| output | The output data source\. | Reference Object, for example, "output":\{"ref":"myDataNodeId"\} | 
+| parent | Parent of the current object from which slots will be inherited\. | Reference Object, for example, "parent":\{"ref":"myBaseObjectId"\} | 
 | pipelineLogUri | The Amazon S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
-| postActivityTaskConfig | Post\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S33 and a list of arguments\. | Reference Object, e\.g\. "postActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
-| preActivityTaskConfig | Pre\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, e\.g\. "preActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
-| precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, e\.g\. "precondition":\{"ref":"myPreconditionId"\} | 
+| postActivityTaskConfig | Post\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S33 and a list of arguments\. | Reference Object, for example, "postActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
+| preActivityTaskConfig | Pre\-activity configuration script to be run\. This consists of a URI of the shell script in Amazon S3 and a list of arguments\. | Reference Object, for example, "preActivityTaskConfig":\{"ref":"myShellScriptConfigId"\} | 
+| precondition | Optionally define a precondition\. A data node is not marked "READY" until all preconditions have been met\. | Reference Object, for example, "precondition":\{"ref":"myPreconditionId"\} | 
 | reportProgressTimeout | The timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | resizeClusterBeforeRunning | Resize the cluster before performing this activity to accommodate DynamoDB data nodes specified as inputs or outputs\. If your activity uses a `DynamoDBDataNode` as either an input or output data node, and if you set the `resizeClusterBeforeRunning` to `TRUE`, AWS Data Pipeline starts using `m3.xlarge` instance types\. This overwrites your instance type choices with `m3.xlarge`, which could increase your monthly costs\.  | Boolean | 
 | resizeClusterMaxInstances | A limit on the maximum number of instances that can be requested by the resize algorithm\. | Integer | 
@@ -324,11 +320,11 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 
 | Runtime Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @activeInstances | List of the currently scheduled active instance objects\. | Reference Object, e\.g\. "activeInstances":\{"ref":"myRunnableObjectId"\} | 
+| @activeInstances | List of the currently scheduled active instance objects\. | Reference Object, for example, "activeInstances":\{"ref":"myRunnableObjectId"\} | 
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain the object failed on\. | Reference Object, for example, "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | Amazon EMR step logs available only on EMR activity attempts\. | String | 
 | errorId | The errorId if this object failed\. | String | 
 | errorMessage | The errorMessage if this object failed\. | String | 
@@ -344,11 +340,11 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 | @latestRunTime | Time the latest run for which the execution was scheduled\. | DateTime | 
 | @nextRunTime | Time of run to be scheduled next\. | DateTime | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object\. | DateTime | 
-| @scheduledStartTime | Schedule start time for object\. | DateTime | 
+| @scheduledEndTime | Schedule end time for the object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for the object\. | DateTime | 
 | @status | The status of this object\. | String | 
-| @version | Pipeline version the object was created with\. | String | 
-| @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 
+| @version | Pipeline version that the object was created with\. | String | 
+| @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, for example, "waitingOn":\{"ref":"myRunnableObjectId"\} | 
 
 
 ****  
@@ -356,11 +352,9 @@ B = LIMIT ${input1} $three; ${output1} = FOREACH B GENERATE $column1, $column2, 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
 | @error | Error describing the ill\-formed object\. | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to\. | String | 
+| @pipelineId | ID of the pipeline to which this object belongs\. | String | 
 | @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 
 
 ## See Also<a name="pigactivity-seealso"></a>
-
 + [ShellCommandActivity](dp-object-shellcommandactivity.md)
-
 + [EmrActivity](dp-object-emractivity.md)

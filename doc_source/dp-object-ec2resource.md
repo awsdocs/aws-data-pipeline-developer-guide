@@ -1,6 +1,8 @@
 # Ec2Resource<a name="dp-object-ec2resource"></a>
 
-An EC2 instance that performs the work defined by a pipeline activity\.
+An Amazon EC2 instance that performs the work defined by a pipeline activity\.
+
+For information about default Amazon EC2 instances that AWS Data Pipeline creates if you do not specify an instance, see [dp-ec2-default-instance-types](dp-ec2-default-instance-types)\.
 
 ## Examples<a name="ec2resource-example"></a>
 

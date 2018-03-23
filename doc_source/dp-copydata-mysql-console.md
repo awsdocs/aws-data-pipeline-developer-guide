@@ -2,7 +2,7 @@
 
 You can create a pipeline to copy data from a MySQL table to a file in an Amazon S3 bucket\.
 
-
+**Topics**
 + [Create the Pipeline](#dp-copydata-mysql-define-objects-console)
 + [Save and Validate Your Pipeline](#dp-copydata-mysql-save-pipeline-console)
 + [Verify Your Pipeline Definition](#dp-copydata-mysql-verify-pipeline-console)

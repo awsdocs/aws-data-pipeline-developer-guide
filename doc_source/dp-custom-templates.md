@@ -1,8 +1,8 @@
-# Creating a Pipeline Using Parameterized Templates<a name="dp-custom-templates"></a>
+# Creating a Pipeline Using Parametrized Templates<a name="dp-custom-templates"></a>
 
-You can use a parameterized template to customize a pipeline definition\. This enables you to create a common pipeline definition but provide different parameters when you add the pipeline definition to a new pipeline\.
+You can use a parametrized template to customize a pipeline definition\. This enables you to create a common pipeline definition but provide different parameters when you add the pipeline definition to a new pipeline\.
 
-
+**Topics**
 + [Add myVariables to the Pipeline Definition](#add-pipeline-variables)
 + [Define Parameter Objects](#define-pipeline-parameter-objects)
 + [Define Parameter Values](#define-pipeline-parameter-values)

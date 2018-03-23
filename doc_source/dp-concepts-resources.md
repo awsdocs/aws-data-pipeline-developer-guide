@@ -46,9 +46,6 @@ You can edit a failed or completed pipeline resource instance to add Spot Instan
 ### Spot Instances Considerations<a name="dp-emrspotinstances-considerations"></a>
 
 When you use Spot Instances with AWS Data Pipeline, the following considerations apply:
-
 + Your Spot Instances can terminate when the Spot Instance price goes above your maximum price for the instance, or due to Amazon EC2 capacity reasons\. However, you do not lose your data because AWS Data Pipeline employs clusters with core nodes that are always On\-Demand Instances and not subject to termination\.
-
 + Spot Instances can take more time to start as they fulfill capacity asynchronously\. Therefore, a Spot Instance pipeline could run more slowly than an equivalent On\-Demand Instance pipeline\.
-
 + Your cluster might not run if you do not receive your Spot Instances, such as when your maximum price is too low\. 

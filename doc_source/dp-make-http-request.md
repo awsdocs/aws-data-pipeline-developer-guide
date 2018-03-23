@@ -7,27 +7,19 @@ For a complete description of the programmatic objects in AWS Data Pipeline, see
 ## HTTP Header Contents<a name="dp-http-header"></a>
 
  AWS Data Pipeline requires the following information in the header of an HTTP request: 
-
 +  `host` The AWS Data Pipeline endpoint\. 
 
   For information about endpoints, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\. 
-
 +  `x-amz-date` You must provide the time stamp in either the HTTP Date header or the AWS x\-amz\-date header\. \(Some HTTP client libraries don't let you set the Date header\.\) When an x\-amz\-date header is present, the system ignores any Date header during the request authentication\. 
 
    The date must be specified in one of the following three formats, as specified in the HTTP/1\.1 RFC: 
-
   +  Sun, 06 Nov 1994 08:49:37 GMT \(RFC 822, updated by RFC 1123\) 
-
   +  Sunday, 06\-Nov\-94 08:49:37 GMT \(RFC 850, obsoleted by RFC 1036\) 
-
   +  Sun Nov 6 08:49:37 1994 \(ANSI C asctime\(\) format\) 
-
 +  `Authorization` The set of authorization parameters that AWS uses to ensure the validity and authenticity of the request\. For more information about constructing this header, go to [Signature Version 4 Signing Process](http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\. 
-
 +  `x-amz-target` The destination service of the request and the operation for the data, in the format: `<<serviceName>>_<<API version>>.<<operationName>>` 
 
   For example, `DataPipeline_20121129.ActivatePipeline`
-
 +  `content-type` Specifies JSON and the version\. For example, `Content-Type: application/x-amz-json-1.0` 
 
  The following is an example header for an HTTP request to activate a pipeline\. 
@@ -100,12 +92,9 @@ Connection: Keep-Alive
 ### Handle the HTTP Response<a name="dp-handle-http-responses"></a>
 
  Here are some important headers in the HTTP response, and how you should handle them in your application: 
-
 +  **HTTP/1\.1**—This header is followed by a status code\. A code value of 200 indicates a successful operation\. Any other value indicates an error\. 
-
 +  **x\-amzn\-RequestId**—This header contains a request ID that you can use if you need to troubleshoot a request with AWS Data Pipeline\. An example of a request ID is K2QH8DNOU907N97FNA2GDLL8OBVV4KQNSO5AEMVJF66Q9ASUAAJG\. 
-
-+  **x\-amz\-crc32**—AWS Data Pipeline calculates a CRC32 checksum of the HTTP payload and returns this checksum in the x\-amz\-crc32 header\. We recommend that you compute your own CRC32 checksum on the client side and compare it with the x\-amz\-crc32 header; if the checksums do not match, it might indicate that the data was corrupted in transit\. If this happens, you should retry your request\.  
++  **x\-amz\-crc32**—AWS Data Pipeline calculates a CRC32 checksum of the HTTP payload and returns this checksum in the x\-amz\-crc32 header\. We recommend that you compute your own CRC32 checksum on the client side and compare it with the x\-amz\-crc32 header; if the checksums do not match, it might indicate that the data was corrupted in transit\. If this happens, you should retry your request\. 
 
  AWS SDK users do not need to manually perform this verification, because the SDKs compute the checksum of each reply from Amazon DynamoDB and automatically retry if a mismatch is detected\. 
 

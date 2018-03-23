@@ -3,9 +3,7 @@
 AWS Data Pipeline requires IAM roles to determine what actions your pipelines can perform and what resources it can access\. Additionally, when a pipeline creates a resource, such as an EC2 instance or EMR cluster, IAM roles determine what actions your applications can perform and what resources they can access\.
 
 The AWS Data Pipeline console creates the following roles for you:
-
 + **DataPipelineDefaultRole** \- Grants AWS Data Pipeline access to your AWS resources
-
 + **DataPipelineDefaultResourceRole** \- Grants your applications access to your AWS resources
 
 If you are using a CLI or an API and you have not used the AWS Data Pipeline console to create a pipeline previously, you must create these roles manually using AWS Identity and Access Management \(IAM\)\. For more information, see [Create the Required IAM Roles \(CLI or API Only\)](dp-get-setup.md#dp-iam-roles-new)\.

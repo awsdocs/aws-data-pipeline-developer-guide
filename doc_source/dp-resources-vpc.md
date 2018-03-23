@@ -1,18 +1,15 @@
 # Launching Resources for Your Pipeline into a VPC<a name="dp-resources-vpc"></a>
 
 Pipelines can launch Amazon EC2 instances and Amazon EMR clusters into a virtual private cloud \(VPC\)\. 
-
 + First, create a VPC and subnets using Amazon VPC\. Configure the VPC so that instances in the VPC can access AWS Data Pipeline endpoint and Amazon S3\.
-
 + Next, set up a security group that grants Task Runner access to your data sources\.
-
 + Finally, specify a subnet from the VPC when you configure your instances and clusters and when you create your data sources\.
 
 Note that if you have a default VPC in a region, it's already configured to access other AWS services\. When you launch a resource, we'll automatically launch it into your default VPC\.
 
 For more information about VPCs, see the [Amazon VPC User Guide](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/)\.
 
-
+**Topics**
 + [Create and Configure a VPC](#dp-create-vpc)
 + [Set up Connectivity Between Resources](#dp-vpc-security-groups)
 + [Configure the Resource](#dp-configure-resource)
@@ -36,9 +33,7 @@ A VPC that you create must have a subnet, an internet gateway, and a route table
 1. The confirmation page shows the CIDR ranges and settings that you've chosen\. Verify that **Enable DNS hostnames** is **Yes**\. Make any other changes that you need, and then click **Create VPC** to create your VPC, subnet, internet gateway, and route table\.
 
 1. After the VPC is created, click **Your VPCs** in the navigation pane and select your VPC from the list\.
-
    + On the **Summary** tab, make sure that both **DNS resolution** and **DNS hostnames** are **yes**\.
-
    + Click the identifier for the DHCP options set\. Make sure that **domain\-name\-servers** is `AmazonProvidedDNS` and **domain\-name** is `ec2.internal` for the US East \(N\. Virginia\) region and *region\-name*\.`compute.internal` for all other regions\. Otherwise, create a new options set with these settings and associate it with the VPC\. For more information, see [Working with DHCP Options Sets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#DHCPOptionSet) in the *Amazon VPC User Guide*\.
 
 If you prefer to create the VPC, subnet, internet gateway, and route table manually, see [Creating a VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html#Create-VPC) and [Adding an Internet Gateway to Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html#Create-VPC) in the *Amazon VPC User Guide*\.
@@ -50,7 +45,6 @@ Security groups act as a virtual firewall for your instances to control inbound 
 For more information about security groups, see [Security Groups for Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
 
 First, identify the security group or IP address used by the resource running Task Runner\.
-
 + If your resource is of type [EmrCluster](dp-object-emrcluster.md), Task Runner runs on the cluster by default\. We create security groups named `ElasticMapReduce-master` and `ElasticMapReduce-slave` when you launch the cluster\. You need the IDs of these security groups later on\.
 
 **To get the IDs of the security groups for a cluster in a VPC**
@@ -62,7 +56,6 @@ First, identify the security group or IP address used by the resource running Ta
   1. If you have a lengthy list of security groups, you can click the **Name** column to sort your security groups by name\. If you don't see a **Name** column, click the **Show/Hide Columns** icon, and then click **Name**\.
 
   1. Note the IDs of the `ElasticMapReduce-master` and `ElasticMapReduce-slave` security groups\.
-
 + If your resource is of type [Ec2Resource](dp-object-ec2resource.md), Task Runner runs on the EC2 instance by default\. Create a security group for the VPC and specify it when you launch the EC2 instance\. You need the ID of this security group later on\.
 
 **To create a security group for an EC2 instance in a VPC**
@@ -78,7 +71,6 @@ First, identify the security group or IP address used by the resource running Ta
   1. Select your VPC from the list, and then click **Create**\.
 
   1. Note the ID of the new security group\.
-
 + If you are running Task Runner on your own computer, note its public IP address, in CIDR notation\. If the computer is behind a firewall, note the entire address range of its network\. You need this address later on\.
 
 Next, create rules in the resource security groups that allow inbound traffic for the data sources Task Runner must access\. For example, if Task Runner must access an Amazon Redshift cluster, the security group for the Amazon Redshift cluster must allow inbound traffic from the resource\.

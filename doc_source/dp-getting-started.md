@@ -28,7 +28,7 @@ Note that if you have a large amount of log file data, you can configure your pi
 [Schedule](dp-object-schedule.md)  
 Defines that the activity is performed every 15 minutes for an hour\.
 
-
+**Topics**
 + [Create the Pipeline](#dp-getting-started-create)
 + [Monitor the Running Pipeline](#dp-getting-started-monitor)
 + [View the Output](#dp-getting-started-output)

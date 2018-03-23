@@ -98,7 +98,7 @@ This is the full pipeline definition JSON file followed by an explanation for ea
 
 For more information about these objects, see the following documentation\.
 
-
+**Topics**
 + [Data Nodes](dp-copydata-redshift-node-cli.md)
 + [Resource](dp-copydata-redshift-resource-cli.md)
 + [Activity](dp-copydata-redshift-activity-cli.md)

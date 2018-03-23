@@ -9,11 +9,8 @@ The staged data on the Amazon EMR or Amazon EC2 resource is available by using s
 Table staging is similar to data staging, except the staged data takes the form of database tables, specifically\. 
 
 AWS Data Pipeline supports the following staging scenarios:
-
 + Data staging with `ShellCommandActivity`
-
 + Table staging with Hive and staging\-supported data nodes
-
 + Table staging with Hive and staging\-unsupported data nodes
 
 **Note**  

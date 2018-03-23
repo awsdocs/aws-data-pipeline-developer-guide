@@ -15,6 +15,11 @@ Amazon's trademarks and trade dress may not be used in
 -----
 ## Contents
 + [What is AWS Data Pipeline?](what-is-datapipeline.md)
+   + [Related Services](datapipeline-related-services.md)
+   + [Supported Instance Types for Pipeline Work Activities](dp-supported-instance-types.md)
+      + [Default Amazon EC2 Instances by AWS Region](dp-ec2-default-instance-types.md)
+      + [Additional Supported Amazon EC2 Instances](dp-ec2-supported-instance-types.md)
+      + [Supported Amazon EC2 Instances for Amazon EMR Clusters](dp-emr-supported-instance-types.md)
 + [AWS Data Pipeline Concepts](dp-concepts.md)
    + [Pipeline Definition](dp-how-pipeline-definition.md)
    + [Pipeline Components, Instances, and Attempts](dp-how-tasks-scheduled.md)
@@ -43,7 +48,7 @@ Amazon's trademarks and trade dress may not be used in
          + [Full Copy of Amazon RDS MySQL Table to Amazon Redshift](dp-template-redshiftrdsfull.md)
          + [Incremental Copy of an Amazon RDS MySQL Table to Amazon Redshift](dp-template-redshiftrdsincremental.md)
          + [Load Data from Amazon S3 into Amazon Redshift](dp-template-s3redshift.md)
-         + [Creating a Pipeline Using Parameterized Templates](dp-custom-templates.md)
+         + [Creating a Pipeline Using Parametrized Templates](dp-custom-templates.md)
       + [Creating Pipelines Using the Console Manually](dp-console-manual.md)
    + [Viewing Your Pipelines](dp-list-pipelines.md)
       + [Interpreting Pipeline Status Codes](dp-interpret-status.md)

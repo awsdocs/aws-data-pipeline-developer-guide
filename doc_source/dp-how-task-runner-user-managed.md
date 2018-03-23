@@ -7,7 +7,7 @@ This approach can be useful when, for example, you want to use AWS Data Pipeline
 To use Task Runner on a resource that you manage, you must first download Task Runner, and then install it on your computational resource, using the procedures in this section\. 
 
 **Note**  
- You can only install Task Runner on Linux, UNIX, or Mac OS\. Task Runner is not supported on the Windows operating system\. 
+ You can only install Task Runner on Linux, UNIX, or macOS\. Task Runner is not supported on the Windows operating system\. 
 
 To connect a Task Runner that you've installed to the pipeline activities it should process, add a `workerGroup` field to the object, and configure Task Runner to poll for that worker group value\. You do this by passing the worker group string as a parameter \(for example, `--workerGroup=wg-12345`\) when you run the Task Runner JAR file\. 
 
@@ -36,9 +36,9 @@ This section explains how to install and configure Task Runner and its prerequis
 
     If you do not have Java 1\.6 or later installed on your computer, you can download the latest version from [http://www\.oracle\.com/technetwork/java/index\.html](http://www.oracle.com/technetwork/java/index.html)\. Download and install Java, and then proceed to the next step\.
 
-1. Download `TaskRunner-1.0.jar` from [https://s3\.amazonaws\.com/datapipeline\-us\-east\-1/us\-east\-1/software/latest/TaskRunner/TaskRunner\-1\.0\.jar](https://s3.amazonaws.com/datapipeline-us-east-1/us-east-1/software/latest/TaskRunner/TaskRunner-1.0.jar) and then copy it into a folder on the target computing resource\. For Amazon EMR clusters running `EmrActivity` tasks, you will install Task Runner on the master node of the cluster\.
+1. Download `TaskRunner-1.0.jar` from [https://s3\.amazonaws\.com/datapipeline\-us\-east\-1/us\-east\-1/software/latest/TaskRunner/TaskRunner\-1\.0\.jar](https://s3.amazonaws.com/datapipeline-us-east-1/us-east-1/software/latest/TaskRunner/TaskRunner-1.0.jar) and then copy it into a folder on the target computing resource\. For Amazon EMR clusters running `EmrActivity` tasks, install Task Runner on the master node of the cluster\.
 
-1.  Task Runner needs to connect to the AWS Data Pipeline web service to process your commands\. In this step, you will configure Task Runner with an AWS account that has permissions to create or manage data pipelines\. 
+1.  Task Runner needs to connect to the AWS Data Pipeline web service to process your commands\. In this step, you configure Task Runner with an AWS account that has permissions to create or manage data pipelines\. 
 
    Create a JSON file named `credentials.json` \(you can use a different name if you prefer\), which specifies an access key ID and secret access key using the format `{ "access-id": "MyAccessKeyID", "private-key": "MySecretAccessKey" } `\. Copy the file to the directory where you installed Task Runner\. 
 
