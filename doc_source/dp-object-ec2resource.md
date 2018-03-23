@@ -2,7 +2,7 @@
 
 An Amazon EC2 instance that performs the work defined by a pipeline activity\.
 
-For information about default Amazon EC2 instances that AWS Data Pipeline creates if you do not specify an instance, see [dp-ec2-default-instance-types](dp-ec2-default-instance-types)\.
+For information about default Amazon EC2 instances that AWS Data Pipeline creates if you do not specify an instance, see [ Default Amazon EC2 Instances by AWS Region](dp-ec2-default-instance-types.md)\.
 
 ## Examples<a name="ec2resource-example"></a>
 
@@ -63,7 +63,7 @@ The following example object launches an EC2 instance into a nondefault VPC, wit
 
 | Object Invocation Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. Users can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example "schedule":\{"ref":"myScheduleId"\} | 
+| schedule | This object is invoked within the execution of a schedule interval\. Users must specify a schedule reference to another object to set the dependency execution order for this object\. You can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), users can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example "schedule":\{"ref":"myScheduleId"\} | 
 
 
 ****  
@@ -77,7 +77,7 @@ The following example object launches an EC2 instance into a nondefault VPC, wit
 | attemptTimeout | Timeout for remote work completion\. If set, then a remote activity that does not complete within the set time of starting may be retried\. | Period | 
 | availabilityZone | The Availability Zone in which to launch the Amazon EC2 instance\. | String | 
 | failureAndRerunMode | Describes consumer node behavior when dependencies fail or are rerun | Enumeration | 
-| httpProxy | The proxy host that clients use to connect to AWS services\. | Reference Object, for example "httpProxy":\{"ref":"myHttpProxyId"\} | 
+| httpProxy | The proxy host that clients use to connect to AWS services\. | Reference Object, for example, "httpProxy":\{"ref":"myHttpProxyId"\} | 
 | imageId | The ID of the AMI to use for the instance\. By default, AWS Data Pipeline uses the PV AMI virtualization type\. The specific AMI IDs used are based on region as follows: [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-ec2resource.html) If the `instanceType` specified does not support PV AMIs \(see [Amazon Linux AMI Instance Type Matrix](https://aws.amazon.com/amazon-linux-ami/instance-type-matrix/), specify the ID of an HVM AMI or an error occurs\. For more information about AMI types, see [Linux AMI Virtualization Types](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/virtualization_types.html) and [Finding a Linux AMI](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html) in the *Amazon EC2 User Guide for Linux Instances*\.  | String | 
 | initTimeout | The amount of time to wait for the resource to start\.  | Period | 
 | instanceCount | Deprecated\. | Integer | 
@@ -89,14 +89,14 @@ The following example object launches an EC2 instance into a nondefault VPC, wit
 | minInstanceCount | Deprecated\. | Integer | 
 | onFail | An action to run when current object fails\. | Reference Object, for example "onFail":\{"ref":"myActionId"\} | 
 | onLateAction | Actions that should be triggered if an object has not yet been scheduled or still not completed\. | Reference Object, for example "onLateAction":\{"ref":"myActionId"\} | 
-| onSuccess | An action to run when the current object succeeds\. | Reference Object, for example "onSuccess":\{"ref":"myActionId"\} | 
-| parent | Parent of the current object from which slots are inherited\. | Reference Object, for example "parent":\{"ref":"myBaseObjectId"\} | 
+| onSuccess | An action to run when the current object succeeds\. | Reference Object, for example, "onSuccess":\{"ref":"myActionId"\} | 
+| parent | Parent of the current object from which slots are inherited\. | Reference Object, for example, "parent":\{"ref":"myBaseObjectId"\} | 
 | pipelineLogUri | The Amazon S3 URI \(such as 's3://BucketName/Key/'\) for uploading logs for the pipeline\. | String | 
 | region |  The code for the region that the EC2 instance should run in\. By default, the instance runs in the same region as the pipeline\. You can run the instance in the same region as a dependent dataset\. | Enumeration | 
 | reportProgressTimeout | Timeout for remote work successive calls to reportProgress\. If set, then remote activities that do not report progress for the specified period may be considered stalled and so retried\. | Period | 
 | retryDelay | The timeout duration between two retry attempts\. | Period | 
 | runAsUser | The user to run TaskRunner\. | String | 
-| runsOn | This field is not allowed on this object\. | Reference Object, for example "runsOn":\{"ref":"myResourceId"\} | 
+| runsOn | This field is not allowed on this object\. | Reference Object, for example, "runsOn":\{"ref":"myResourceId"\} | 
 | scheduleType | Schedule type allows you to specify whether the objects in your pipeline definition should be scheduled at the beginning of interval or end of the interval\. Time Series Style Scheduling means that instances are scheduled at the end of each interval and Cron Style Scheduling means that instances are scheduled at the beginning of each interval\. An on\-demand schedule allows you to run a pipeline one time per activation\. You do not have to clone or re\-create the pipeline to run it again\. If you use an on\-demand schedule, it must be specified in the default object and must be the only scheduleType specified for objects in the pipeline\. To use on\-demand pipelines, you simply call the ActivatePipeline operation for each subsequent run\. Values are: cron, ondemand, and timeseries\. | Enumeration | 
 | securityGroupIds | The IDs of one or more Amazon EC2 security groups to use for the instances in the resource pool\. | String | 
 | securityGroups | One or more Amazon EC2 security groups to use for the instances in the resource pool\. | String | 
@@ -111,11 +111,11 @@ The following example object launches an EC2 instance into a nondefault VPC, wit
 
 | Runtime Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @activeInstances | List of the currently scheduled active instance objects\. | Reference Object, e\.g\. "activeInstances":\{"ref":"myRunnableObjectId"\} | 
+| @activeInstances | List of the currently scheduled active instance objects\. | Reference Object, for example, "activeInstances":\{"ref":"myRunnableObjectId"\} | 
 | @actualEndTime | Time when the execution of this object finished\. | DateTime | 
 | @actualStartTime | Time when the execution of this object started\. | DateTime | 
 | cancellationReason | The cancellationReason if this object was cancelled\. | String | 
-| @cascadeFailedOn | Description of the dependency chain on which the object failed\. | Reference Object, e\.g\. "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
+| @cascadeFailedOn | Description of the dependency chain on which the object failed\. | Reference Object, for example, "cascadeFailedOn":\{"ref":"myRunnableObjectId"\} | 
 | emrStepLog | Step logs are available only on Amazon EMR activity attempts\. | String | 
 | errorId | The error ID if this object failed\. | String | 
 | errorMessage | The error message if this object failed\. | String | 
@@ -136,7 +136,7 @@ The following example object launches an EC2 instance into a nondefault VPC, wit
 | @scheduledStartTime | Schedule start time for the object | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version with which the object was created\. | String | 
-| @waitingOn | Description of the list of dependencies on which this object is waiting\. | Reference Object, for example "waitingOn":\{"ref":"myRunnableObjectId"\} | 
+| @waitingOn | Description of the list of dependencies on which this object is waiting\. | Reference Object, for example, "waitingOn":\{"ref":"myRunnableObjectId"\} | 
 
 
 ****  
