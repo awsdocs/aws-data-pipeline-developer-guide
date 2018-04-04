@@ -34,7 +34,7 @@ This section explains how to install and configure Task Runner and its prerequis
    java -version
    ```
 
-    If you do not have Java 1\.6 or later installed on your computer, you can download the latest version from [http://www\.oracle\.com/technetwork/java/index\.html](http://www.oracle.com/technetwork/java/index.html)\. Download and install Java, and then proceed to the next step\.
+    If you do not have Java 1\.6 or later installed on your computer, you can download the latest version from [http://www\.oracle\.com/technetwork/java/index\.html](http://www.oracle.com/technetwork/java/index.html)\. Download and install Java, and then proceed to the next step\. (There is an incompatibility issue with Java 9 so is suggested  keep a version no far from 1.6. this solutions is tested as well with version Java 1.8 and works seamlessly)
 
 1. Download `TaskRunner-1.0.jar` from [https://s3\.amazonaws\.com/datapipeline\-us\-east\-1/us\-east\-1/software/latest/TaskRunner/TaskRunner\-1\.0\.jar](https://s3.amazonaws.com/datapipeline-us-east-1/us-east-1/software/latest/TaskRunner/TaskRunner-1.0.jar) and then copy it into a folder on the target computing resource\. For Amazon EMR clusters running `EmrActivity` tasks, install Task Runner on the master node of the cluster\.
 
