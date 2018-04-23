@@ -1,8 +1,8 @@
 # Task Runners<a name="dp-how-remote-taskrunner-client"></a>
 
- A task runner is an application that polls AWS Data Pipeline for tasks and then performs those tasks\.  
+ A task runner is an application that polls AWS Data Pipeline for tasks and then performs those tasks\. 
 
- Task Runner is a default implementation of a task runner that is provided by AWS Data Pipeline\. When Task Runner is installed and configured, it polls AWS Data Pipeline for tasks associated with pipelines that you have activated\. When a task is assigned to Task Runner, it performs that task and reports its status back to AWS Data Pipeline\.  
+ Task Runner is a default implementation of a task runner that is provided by AWS Data Pipeline\. When Task Runner is installed and configured, it polls AWS Data Pipeline for tasks associated with pipelines that you have activated\. When a task is assigned to Task Runner, it performs that task and reports its status back to AWS Data Pipeline\. 
 
 The following diagram illustrates how AWS Data Pipeline and a task runner interact to process a scheduled task\. A task is a discrete unit of work that the AWS Data Pipeline service shares with a task runner\. It differs from a pipeline, which is a general definition of activities and resources that usually yields several tasks\.
 

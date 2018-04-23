@@ -50,8 +50,8 @@
 | lastRetryTime | Last time when the precondition was tried within this attempt\. | String | 
 | node | The node for which this precondition is being performed | Reference Object, e\.g\. "node":\{"ref":"myRunnableObjectId"\} | 
 | reportProgressTime | Most recent time that remote activity reported progress\. | DateTime | 
-| @scheduledEndTime | Schedule end time for object | DateTime | 
-| @scheduledStartTime | Schedule start time for object | DateTime | 
+| @scheduledEndTime | Schedule end time for object\. | DateTime | 
+| @scheduledStartTime | Schedule start time for object\. | DateTime | 
 | @status | The status of this object\. | String | 
 | @version | Pipeline version the object was created with\. | String | 
 | @waitingOn | Description of list of dependencies this object is waiting on\. | Reference Object, e\.g\. "waitingOn":\{"ref":"myRunnableObjectId"\} | 
@@ -61,6 +61,6 @@
 
 | System Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| @error | Error describing the ill\-formed object | String | 
-| @pipelineId | Id of the pipeline to which this object belongs to | String | 
-| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects | String | 
+| @error | Error describing the ill\-formed object\. | String | 
+| @pipelineId | Id of the pipeline to which this object belongs\. | String | 
+| @sphere | The sphere of an object denotes its place in the lifecycle: Component Objects give rise to Instance Objects which execute Attempt Objects\. | String | 

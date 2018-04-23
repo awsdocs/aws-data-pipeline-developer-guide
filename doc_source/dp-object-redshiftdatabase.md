@@ -17,7 +17,7 @@ The following is an example of this object type\.
 }
 ```
 
-By default, the object uses the Postgres driver, which requires the `clusterId` field\. To use the Redshift driver, specify the Redshift database connection string from the Amazon Redshift console \(starts with "jdbc:redshift:"\) in the `connectionString` field instead\.
+By default, the object uses the Postgres driver, which requires the `clusterId` field\. To use the Amazon Redshift driver, specify the Amazon Redshift database connection string from the Amazon Redshift console \(starts with "jdbc:redshift:"\) in the `connectionString` field instead\.
 
 ## Syntax<a name="redshiftdatabase-syntax"></a>
 

@@ -8,7 +8,7 @@ The AWS Data Pipeline console creates the following roles for you:
 
 If you are using a CLI or an API and you have not used the AWS Data Pipeline console to create a pipeline previously, you must create these roles manually using AWS Identity and Access Management \(IAM\)\. For more information, see [Create the Required IAM Roles \(CLI or API Only\)](dp-get-setup.md#dp-iam-roles-new)\.
 
-Alternatively, you can create custom roles\. For an example of how to specify these roles for an `EmrCluster` object, see [Specify custom IAM roles](dp-object-emrcluster.md#example4)\.
+Alternatively, you can create custom roles\. For an example of how to specify these roles for an `EmrCluster` object, see [Specify custom IAM roles](emrcluster-example2-disable-encryption.md#example4)\.
 
 ## Update Existing IAM Roles for AWS Data Pipeline<a name="dp-iam-existing-accounts"></a>
 

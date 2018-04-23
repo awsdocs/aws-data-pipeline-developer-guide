@@ -2,9 +2,9 @@
 
 HttpProxy allows you to configure your own proxy and make Task Runner access the AWS Data Pipeline service through it\. You do not need to configure a running Task Runner with this information\.
 
-## Example<a name="w3ab1c27c17c11b5"></a>
+## Example of an HttpProxy in TaskRunner<a name="example9"></a>
 
-The following pipeline definition shows an HttpProxy object:
+The following pipeline definition shows an `HttpProxy` object:
 
 ```
 {

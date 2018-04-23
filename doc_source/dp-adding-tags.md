@@ -1,8 +1,8 @@
 # Tagging Your Pipeline<a name="dp-adding-tags"></a>
 
-Tags are case\-sensitive key\-value pairs that consist of a key and an optional value, both defined by the user\. You can apply up to 10 tags to each pipeline\. Tag keys must be unique for each pipeline\. If you add a tag with a key that is already associated with the pipeline, it updates the value of that tag\.
+Tags are case\-sensitive key\-value pairs that consist of a key and an optional value, both defined by the user\. You can apply up to ten tags to each pipeline\. Tag keys must be unique for each pipeline\. If you add a tag with a key that is already associated with the pipeline, it updates the value of that tag\.
 
-Applying a tag to a pipeline also propagates the tags to its underlying resources \(for example, EMR clusters and EC2 instances\)\. However, it does not apply these tags to resources in a `FINISHED` or otherwise terminated state\.
+Applying a tag to a pipeline also propagates the tags to its underlying resources \(for example, Amazon EMR clusters and Amazon EC2 instances\)\. However, it does not apply these tags to resources in a `FINISHED` or otherwise terminated state\. You can use the CLI to apply tags to these resources, if needed\.
 
 When you are finished with a tag, you can remove it from your pipeline\.
 
