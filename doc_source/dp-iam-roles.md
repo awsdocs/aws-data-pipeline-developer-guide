@@ -199,7 +199,7 @@ If you have a custom role and you would like to change roles for existing pipeli
 
 1. Open the AWS Data Pipeline console at [https://console\.aws\.amazon\.com/datapipeline/](https://console.aws.amazon.com/datapipeline/)\.
 
-1. Select the pipeline you desire to edit by clicking the pipeline ID\.
+1. Select the pipeline you wish to edit by clicking the pipeline ID\.
 
 1. Choose **Edit Pipeline**\.
 

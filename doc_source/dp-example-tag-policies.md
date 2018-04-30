@@ -15,7 +15,7 @@ The following policy allows users to use the read\-only AWS Data Pipeline API ac
 The ListPipelines API action does not support tag\-based authorization\.
 
 ```
-{g
+{
   "Version": "2012-10-17",
   "Statement": [
     {
