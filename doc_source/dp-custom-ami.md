@@ -10,6 +10,6 @@ A custom AMI must meet the following requirements for AWS Data Pipeline to use i
   + Bash
   + wget
   + unzip
-  + Java 1\.6 or newer
+  + Java 1\.6 or 1\.8
   + cloud\-init
 + Create and configure a user account named `ec2-user`\.
