@@ -27,7 +27,7 @@ Your resources run in a single, flat network that you share with other customers
 EC2\-VPC  
 Your resources run in a virtual private cloud \(VPC\) that's logically isolated to your AWS account\.
 
-Your AWS account can launch resources either into both platforms or only into EC2\-VPC, on a region by region basis\. For more information, see [Supported Platforms](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) in the *Amazon EC2 User Guide for Linux Instances*\.
+Your AWS account can launch resources either into both platforms or only into EC2\-VPC, on a region by region basis\. For more information, see [Supported Platforms](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-supported-platforms.html) in the *Amazon EC2 User Guide for Linux Instances*\.
 
 If your AWS account supports only EC2\-VPC, we create a default VPC for you in each AWS Region\. By default, we launch your resources into a default subnet of your default VPC\. Alternatively, you can create a nondefault VPC and specify one of its subnets when you configure your resources, and then we launch your resources into the specified subnet of the nondefault VPC\.
 

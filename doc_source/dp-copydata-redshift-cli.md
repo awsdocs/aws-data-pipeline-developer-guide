@@ -2,7 +2,7 @@
 
 This tutorial demonstrates how to copy data from Amazon S3 to Amazon Redshift\. You'll create a new table in Amazon Redshift, and then use AWS Data Pipeline to transfer data to this table from a public Amazon S3 bucket, which contains sample input data in CSV format\. The logs are saved to an Amazon S3 bucket that you own\.
 
-Amazon S3 is a web service that enables you to store data in the cloud\. For more information, see the [Amazon Simple Storage Service Console User Guide](http://docs.aws.amazon.com/AmazonS3/latest/user-guide/)\. Amazon Redshift is a data warehouse service in the cloud\. For more information, see the [Amazon Redshift Cluster Management Guide](http://docs.aws.amazon.com/redshift/latest/mgmt/)\.
+Amazon S3 is a web service that enables you to store data in the cloud\. For more information, see the [Amazon Simple Storage Service Console User Guide](https://docs.aws.amazon.com/AmazonS3/latest/user-guide/)\. Amazon Redshift is a data warehouse service in the cloud\. For more information, see the [Amazon Redshift Cluster Management Guide](https://docs.aws.amazon.com/redshift/latest/mgmt/)\.
 
 **Prerequisites**
 

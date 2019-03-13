@@ -20,7 +20,7 @@ If you are using the CLI, it's a good idea to retrieve the pipeline definition b
 If you are using the CLI, you can get two different versions of your pipeline\. The `active` version is the pipeline that is currently running\. The `latest` version is a copy that's created when you edit a running pipeline\. When you upload the edited pipeline, it becomes the `active` version and the previous `active` version is no longer available\.
 
 **To get a pipeline definition using the AWS CLI**  
-To get the complete pipeline definition, use the [get\-pipeline\-definition](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/get-pipeline-definition.html) command\. The pipeline definition is printed to standard output \(stdout\)\.
+To get the complete pipeline definition, use the [get\-pipeline\-definition](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/get-pipeline-definition.html) command\. The pipeline definition is printed to standard output \(stdout\)\.
 
 The following example gets the pipeline definition for the specified pipeline\.
 

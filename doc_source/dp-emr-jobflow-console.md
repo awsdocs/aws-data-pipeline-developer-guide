@@ -96,7 +96,7 @@ Next, configure the Amazon SNS notification action that AWS Data Pipeline perfor
 
    1. In the **Subject** field, enter the subject line for your notification\.
 
-   1. In the **Topic Arn** field, enter the ARN of your topic \(see [Create a Topic](http://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\)\.
+   1. In the **Topic Arn** field, enter the ARN of your topic \(see [Create a Topic](https://docs.aws.amazon.com/sns/latest/dg/CreateTopic.html)\)\.
 
    1. In **Message**, enter the message content\.
 

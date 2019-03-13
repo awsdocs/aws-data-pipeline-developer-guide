@@ -7,7 +7,7 @@ Pipelines can launch Amazon EC2 instances and Amazon EMR clusters into a virtual
 
 Note that if you have a default VPC in a region, it's already configured to access other AWS services\. When you launch a resource, we'll automatically launch it into your default VPC\.
 
-For more information about VPCs, see the [Amazon VPC User Guide](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/)\.
+For more information about VPCs, see the [Amazon VPC User Guide](https://docs.aws.amazon.com/vpc/latest/userguide/)\.
 
 **Topics**
 + [Create and Configure a VPC](#dp-create-vpc)
@@ -34,15 +34,15 @@ A VPC that you create must have a subnet, an internet gateway, and a route table
 
 1. After the VPC is created, click **Your VPCs** in the navigation pane and select your VPC from the list\.
    + On the **Summary** tab, make sure that both **DNS resolution** and **DNS hostnames** are **yes**\.
-   + Click the identifier for the DHCP options set\. Make sure that **domain\-name\-servers** is `AmazonProvidedDNS` and **domain\-name** is `ec2.internal` for the US East \(N\. Virginia\) region and *region\-name*\.`compute.internal` for all other regions\. Otherwise, create a new options set with these settings and associate it with the VPC\. For more information, see [Working with DHCP Options Sets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_DHCP_Options.html#DHCPOptionSet) in the *Amazon VPC User Guide*\.
+   + Click the identifier for the DHCP options set\. Make sure that **domain\-name\-servers** is `AmazonProvidedDNS` and **domain\-name** is `ec2.internal` for the US East \(N\. Virginia\) region and *region\-name*\.`compute.internal` for all other regions\. Otherwise, create a new options set with these settings and associate it with the VPC\. For more information, see [Working with DHCP Options Sets](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_DHCP_Options.html#DHCPOptionSet) in the *Amazon VPC User Guide*\.
 
-If you prefer to create the VPC, subnet, internet gateway, and route table manually, see [Creating a VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html#Create-VPC) and [Adding an Internet Gateway to Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html#Create-VPC) in the *Amazon VPC User Guide*\.
+If you prefer to create the VPC, subnet, internet gateway, and route table manually, see [Creating a VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#Create-VPC) and [Adding an Internet Gateway to Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Subnets.html#Create-VPC) in the *Amazon VPC User Guide*\.
 
 ## Set up Connectivity Between Resources<a name="dp-vpc-security-groups"></a>
 
 Security groups act as a virtual firewall for your instances to control inbound and outbound traffic\. You must grant Task Runner access to your data sources\.
 
-For more information about security groups, see [Security Groups for Your VPC](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
+For more information about security groups, see [Security Groups for Your VPC](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_SecurityGroups.html) in the *Amazon VPC User Guide*\.
 
 First, identify the security group or IP address used by the resource running Task Runner\.
 + If your resource is of type [EmrCluster](dp-object-emrcluster.md), Task Runner runs on the cluster by default\. We create security groups named `ElasticMapReduce-master` and `ElasticMapReduce-slave` when you launch the cluster\. You need the IDs of these security groups later on\.

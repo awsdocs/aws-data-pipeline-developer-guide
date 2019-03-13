@@ -15,7 +15,7 @@ From your pipeline definition, AWS Data Pipeline determines the tasks, schedules
 You can create a pipeline definition in the following ways: 
 +  Graphically, by using the AWS Data Pipeline console 
 +  Textually, by writing a JSON file in the format used by the command line interface 
-+  Programmatically, by calling the web service with either one of the AWS SDKs or the [AWS Data Pipeline API](http://docs.aws.amazon.com/datapipeline/latest/APIReference/Welcome.html) 
++  Programmatically, by calling the web service with either one of the AWS SDKs or the [AWS Data Pipeline API](https://docs.aws.amazon.com/datapipeline/latest/APIReference/Welcome.html) 
 
  A pipeline definition can contain the following types of components\.Pipeline Components
 

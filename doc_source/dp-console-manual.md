@@ -3,7 +3,7 @@
 You can create a pipeline using the AWS Data Pipeline console without the assistance of templates\. The example pipeline uses AWS Data Pipeline to copy a CSV from one Amazon S3 bucket to another on a schedule\.
 
 **Prerequisites**  
-An Amazon S3 bucket for the file copy source and destination used in the procedure\. For more information, see [Create a Bucket](http://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) in the *Amazon Simple Storage Service Getting Started Guide*\.
+An Amazon S3 bucket for the file copy source and destination used in the procedure\. For more information, see [Create a Bucket](https://docs.aws.amazon.com/AmazonS3/latest/gsg/CreatingABucket.html) in the *Amazon Simple Storage Service Getting Started Guide*\.
 
 **Topics**
 + [Create the Pipeline Definition](#dp-console-manual-create)

@@ -2,6 +2,9 @@
 
 Defines an Amazon RDS database\.
 
+**Note**  
+RdsDatabase does not support Aurora\. Use [JdbcDatabase](dp-object-jdbcdatabase.md) for Aurora, instead\.
+
 ## Example<a name="rdsdatabase-example"></a>
 
 The following is an example of this object type\.

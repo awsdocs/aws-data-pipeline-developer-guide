@@ -54,7 +54,7 @@
 
    If you have an existing Amazon Redshift cluster, make a note of the cluster ID\. 
 
-   To create a new cluster and load sample data, follow the steps in [Getting Started with Amazon Redshift](http://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)\. For more information about creating clusters, see [Creating a Cluster](http://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster) in the *Amazon Redshift Cluster Management Guide*\. 
+   To create a new cluster and load sample data, follow the steps in [Getting Started with Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html)\. For more information about creating clusters, see [Creating a Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/managing-clusters-console.html#create-cluster) in the *Amazon Redshift Cluster Management Guide*\. 
 
    1. Open the Amazon Redshift console\.
 

@@ -57,7 +57,7 @@ Next, configure the Amazon SNS notification actions that AWS Data Pipeline perfo
 
    1. From **Type**, select `SnsAlarm`\.
 
-   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
+   1. In **Topic Arn**, enter the ARN of the topic that you created\. See [ARN resource names for Amazon SNS](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
 
    1. Enter a subject and a message\.
 
@@ -67,7 +67,7 @@ Next, configure the Amazon SNS notification actions that AWS Data Pipeline perfo
 
    1. From **Type**, select `SnsAlarm`\.
 
-   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
+   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
 
    1. Enter a subject and a message\.
 
@@ -77,6 +77,6 @@ Next, configure the Amazon SNS notification actions that AWS Data Pipeline perfo
 
    1. From **Type**, select `SnsAlarm`\.
 
-   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](http://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
+   1. In **Topic Arn**, enter the ARN of the topic that you created \(see [ARN resource names for Amazon SNS](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-sns)\.
 
    1. Enter a subject and a message\.

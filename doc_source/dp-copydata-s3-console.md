@@ -115,10 +115,6 @@ Next, configure the resource AWS Data Pipeline must use to perform the copy acti
 
    If you have created your own IAM roles, you can select them if you prefer\.
 
-1. \[EC2\-VPC\] From **Add an optional field**, select **Subnet Id**\.
-
-1. \[EC2\-VPC\] In **Subnet Id**, enter the ID of the subnet for the EC2 instance\.
-
 Next, configure the Amazon SNS notification action that AWS Data Pipeline performs after the copy activity finishes successfully\.
 
 **To configure the notification action**

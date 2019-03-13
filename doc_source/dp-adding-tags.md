@@ -21,19 +21,19 @@ When you are finished with a tag, you can remove it from your pipeline\.
    1. Click **Save**\.
 
 **To tag your pipeline using the AWS CLI**  
-To add tags to a new pipeline, add the `--tags` option to your [create\-pipeline](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/create-pipeline.html) command\. For example, the following option creates a pipeline with two tags, an `environment` tag with a value of `production`, and an `owner` tag with a value of `sales`\.
+To add tags to a new pipeline, add the `--tags` option to your [create\-pipeline](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/create-pipeline.html) command\. For example, the following option creates a pipeline with two tags, an `environment` tag with a value of `production`, and an `owner` tag with a value of `sales`\.
 
 ```
 --tags key=environment,value=production key=owner,value=sales
 ```
 
-To add tags to an existing pipeline, use the [add\-tags](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/add-tags.html) command as follows:
+To add tags to an existing pipeline, use the [add\-tags](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/add-tags.html) command as follows:
 
 ```
 aws datapipeline add-tags --pipeline-id df-00627471SOVYZEXAMPLE --tags key=environment,value=production key=owner,value=sales
 ```
 
-To remove tags from an existing pipeline, use the [remove\-tags](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/remove-tags.html) command as follows:
+To remove tags from an existing pipeline, use the [remove\-tags](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/remove-tags.html) command as follows:
 
 ```
 aws datapipeline remove-tags --pipeline-id df-00627471SOVYZEXAMPLE --tag-keys environment owner

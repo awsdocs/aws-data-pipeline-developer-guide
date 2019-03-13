@@ -93,37 +93,49 @@ The following policy allows users to use all the AWS Data Pipeline API actions, 
 
 ## Example 4: Grant users access to the AWS Data Pipeline console<a name="example4-grant-users-access-to-console"></a>
 
-The following policy allows users to create and manage a pipeline using the AWS Data Pipeline console\.
+The following policy allows users to create and manage a pipeline using the AWS Data Pipeline console\. 
+
+This policy includes the action for `PassRole` permissions for specific resources tied to the `roleARN` that AWS Data Pipeline needs\. For more information about the identity\-based \(IAM\) `PassRole` permission, see the blog post [ Granting Permission to Launch EC2 Instances with IAM Roles \(PassRole Permission\)](https://aws.amazon.com/blogs/security/granting-permission-to-launch-ec2-instances-with-iam-roles-passrole-permission/)\.
 
 ```
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Action": [
-        "cloudwatch:*",
-        "datapipeline:*",
-        "dynamodb:DescribeTable",
-        "elasticmapreduce:AddJobFlowSteps",
-        "elasticmapreduce:ListInstance*",
-        "iam:AddRoleToInstanceProfile",
-        "iam:CreateInstanceProfile",
-        "iam:GetInstanceProfile",
-        "iam:GetRole",
-        "iam:ListInstanceProfiles",
-        "iam:ListInstanceProfilesForRole",
-        "iam:ListRoles",
-        "iam:PassRole",
-        "rds:DescribeDBInstances",
-        "rds:DescribeDBSecurityGroups",
-        "redshift:DescribeClusters",
-        "redshift:DescribeClusterSecurityGroups", 
-        "s3:List*",
-        "sns:ListTopics"
-      ],
-      "Resource": "*"
-    }
-  ]
+"Version": "2012-10-17",
+"Statement": [
+{
+"Action": [
+"cloudwatch:*",
+"datapipeline:*",
+"dynamodb:DescribeTable",
+"elasticmapreduce:AddJobFlowSteps",
+"elasticmapreduce:ListInstance*",
+"iam:AddRoleToInstanceProfile",
+"iam:CreateInstanceProfile",
+"iam:GetInstanceProfile",
+"iam:GetRole",
+"iam:GetRolePolicy",
+"iam:ListInstanceProfiles",
+"iam:ListInstanceProfilesForRole",
+"iam:ListRoles",
+"rds:DescribeDBInstances",
+"rds:DescribeDBSecurityGroups",
+"redshift:DescribeClusters",
+"redshift:DescribeClusterSecurityGroups",
+"s3:List*",
+"sns:ListTopics"
+],
+"Effect": "Allow",
+"Resource": [
+"*"
+]
+},
+{
+"Action": "iam:PassRole",
+"Effect": "Allow",
+"Resource": [
+"arn:aws:iam::*:role/DataPipelineDefaultResourceRole",
+"arn:aws:iam::*:role/DataPipelineDefaultRole"
+]
+}
+]
 }
 ```

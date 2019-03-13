@@ -21,9 +21,9 @@ The following components of AWS Data Pipeline work together to manage your data:
 
 You can create, access, and manage your pipelines using any of the following interfaces:
 + **AWS Management Console**— Provides a web interface that you can use to access AWS Data Pipeline\.
-+ **AWS Command Line Interface \(AWS CLI\)** — Provides commands for a broad set of AWS services, including AWS Data Pipeline, and is supported on Windows, macOS, and Linux\. For more information about installing the AWS CLI, see [AWS Command Line Interface](https://aws.amazon.com/cli/)\. For a list of commands for AWS Data Pipeline, see [datapipeline](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/index.html)\.
++ **AWS Command Line Interface \(AWS CLI\)** — Provides commands for a broad set of AWS services, including AWS Data Pipeline, and is supported on Windows, macOS, and Linux\. For more information about installing the AWS CLI, see [AWS Command Line Interface](https://aws.amazon.com/cli/)\. For a list of commands for AWS Data Pipeline, see [datapipeline](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/index.html)\.
 + **AWS SDKs** — Provides language\-specific APIs and takes care of many of the connection details, such as calculating signatures, handling request retries, and error handling\. For more information, see [AWS SDKs](http://aws.amazon.com/tools/#SDKs)\.
-+ **Query API**— Provides low\-level APIs that you call using HTTPS requests\. Using the Query API is the most direct way to access AWS Data Pipeline, but it requires that your application handle low\-level details such as generating the hash to sign the request, and error handling\. For more information, see the *[AWS Data Pipeline API Reference](http://docs.aws.amazon.com/datapipeline/latest/APIReference/)*\.
++ **Query API**— Provides low\-level APIs that you call using HTTPS requests\. Using the Query API is the most direct way to access AWS Data Pipeline, but it requires that your application handle low\-level details such as generating the hash to sign the request, and error handling\. For more information, see the *[AWS Data Pipeline API Reference](https://docs.aws.amazon.com/datapipeline/latest/APIReference/)*\.
 
 ## Pricing<a name="datapipeline-pricing"></a>
 

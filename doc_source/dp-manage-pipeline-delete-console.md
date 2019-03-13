@@ -14,7 +14,7 @@ You can't restore a pipeline after you delete it, so be sure that you won't need
 1. When prompted for confirmation, click **Delete**\.
 
 **To delete a pipeline using the AWS CLI**  
-To delete a pipeline, use the [delete\-pipeline](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/delete-pipeline.html) command\. The following command deletes the specified pipeline\.
+To delete a pipeline, use the [delete\-pipeline](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/delete-pipeline.html) command\. The following command deletes the specified pipeline\.
 
 ```
 aws datapipeline delete-pipeline --pipeline-id df-00627471SOVYZEXAMPLE

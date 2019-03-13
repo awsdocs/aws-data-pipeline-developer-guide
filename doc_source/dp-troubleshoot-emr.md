@@ -14,4 +14,4 @@ If an `EMRCluster` or `EMRActivity` fails and the error information provided by 
 **Note**  
 For the **Debug** button to function, your pipeline definition must have set the EmrActivity `enableDebugging` option to `true` and the `EmrLogUri` option to a valid path\.
 
-1. Now that you know which Amazon EMR cluster contains the error that causes your pipeline failure, follow the [Troubleshooting Tips](http://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/Debugging.html) in the *Amazon EMR Developer Guide*\.
+1. Now that you know which Amazon EMR cluster contains the error that causes your pipeline failure, follow the [Troubleshooting Tips](https://docs.aws.amazon.com/ElasticMapReduce/latest/DeveloperGuide/Debugging.html) in the *Amazon EMR Developer Guide*\.

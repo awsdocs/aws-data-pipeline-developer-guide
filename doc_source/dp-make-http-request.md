@@ -1,6 +1,6 @@
 # Making an HTTP Request to AWS Data Pipeline<a name="dp-make-http-request"></a>
 
-For a complete description of the programmatic objects in AWS Data Pipeline, see the [AWS Data Pipeline API Reference](http://docs.aws.amazon.com/datapipeline/latest/APIReference/Welcome.html)\. 
+For a complete description of the programmatic objects in AWS Data Pipeline, see the [AWS Data Pipeline API Reference](https://docs.aws.amazon.com/datapipeline/latest/APIReference/Welcome.html)\. 
 
  If you don't use one of the AWS SDKs, you can perform AWS Data Pipeline operations over HTTP using the POST request method\. The POST method requires you to specify the operation in the header of the request and provide the data for the operation in JSON format in the body of the request\. 
 
@@ -9,14 +9,14 @@ For a complete description of the programmatic objects in AWS Data Pipeline, see
  AWS Data Pipeline requires the following information in the header of an HTTP request: 
 +  `host` The AWS Data Pipeline endpoint\. 
 
-  For information about endpoints, see [Regions and Endpoints](http://docs.aws.amazon.com/general/latest/gr/rande.html)\. 
+  For information about endpoints, see [Regions and Endpoints](https://docs.aws.amazon.com/general/latest/gr/rande.html)\. 
 +  `x-amz-date` You must provide the time stamp in either the HTTP Date header or the AWS x\-amz\-date header\. \(Some HTTP client libraries don't let you set the Date header\.\) When an x\-amz\-date header is present, the system ignores any Date header during the request authentication\. 
 
    The date must be specified in one of the following three formats, as specified in the HTTP/1\.1 RFC: 
   +  Sun, 06 Nov 1994 08:49:37 GMT \(RFC 822, updated by RFC 1123\) 
   +  Sunday, 06\-Nov\-94 08:49:37 GMT \(RFC 850, obsoleted by RFC 1036\) 
   +  Sun Nov 6 08:49:37 1994 \(ANSI C asctime\(\) format\) 
-+  `Authorization` The set of authorization parameters that AWS uses to ensure the validity and authenticity of the request\. For more information about constructing this header, go to [Signature Version 4 Signing Process](http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\. 
++  `Authorization` The set of authorization parameters that AWS uses to ensure the validity and authenticity of the request\. For more information about constructing this header, go to [Signature Version 4 Signing Process](https://docs.aws.amazon.com/general/latest/gr/signature-version-4.html)\. 
 +  `x-amz-target` The destination service of the request and the operation for the data, in the format: `<<serviceName>>_<<API version>>.<<operationName>>` 
 
   For example, `DataPipeline_20121129.ActivatePipeline`

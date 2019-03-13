@@ -36,7 +36,7 @@ When you are ready to resume the pipeline runs, use the following procedure to a
 
 ## Deactivate Your Pipeline Using the AWS CLI<a name="dp-deactivate-pipeline-cli"></a>
 
-Use the following [deactivate\-pipeline](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/deactivate-pipeline.html) command to deactivate a pipeline:
+Use the following [deactivate\-pipeline](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/deactivate-pipeline.html) command to deactivate a pipeline:
 
 ```
 aws datapipeline deactivate-pipeline --pipeline-id df-00627471SOVYZEXAMPLE
@@ -48,7 +48,7 @@ To deactivate the pipeline only after all running activities finish, add the `--
 aws datapipeline deactivate-pipeline --pipeline-id df-00627471SOVYZEXAMPLE --no-cancel-active
 ```
 
-When you are ready, you can resume the pipeline execution where it left off using the following [activate\-pipeline](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/activate-pipeline.html) command:
+When you are ready, you can resume the pipeline execution where it left off using the following [activate\-pipeline](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/activate-pipeline.html) command:
 
 ```
 aws datapipeline activate-pipeline --pipeline-id df-00627471SOVYZEXAMPLE

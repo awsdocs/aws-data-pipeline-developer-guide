@@ -2,7 +2,7 @@
 
 By default, IAM users don't have permission to create or modify AWS resources\. To allow IAM users to create or modify resources and perform tasks, you must create IAM policies that grant IAM users permission to use the specific resources and API actions they'll need, and then attach those policies to the IAM users or groups that require those permissions\.
 
-When you attach a policy to a user or group of users, it allows or denies the users permission to perform the specified tasks on the specified resources\. For general information about IAM policies, see [Permissions and Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html) in the *IAM User Guide* guide\. For more information about managing and creating custom IAM policies, see [Managing IAM Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
+When you attach a policy to a user or group of users, it allows or denies the users permission to perform the specified tasks on the specified resources\. For general information about IAM policies, see [Permissions and Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/PermissionsAndPolicies.html) in the *IAM User Guide* guide\. For more information about managing and creating custom IAM policies, see [Managing IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html)\.
 
 **Topics**
 + [Policy Syntax](#dp-policy-syntax)
@@ -31,11 +31,11 @@ An IAM policy is a JSON document that consists of one or more statements\. Each 
 
 The following elements make up a policy statement:
 + **Effect:** The *effect* can be `Allow` or `Deny`\. By default, IAM users don't have permission to use resources and API actions, so all requests are denied\. An explicit allow overrides the default\. An explicit deny overrides any allows\.
-+ **Action**: The *action* is the specific API action for which you are granting or denying permission\. For a list of actions for AWS Data Pipeline, see [Actions](http://docs.aws.amazon.com/datapipeline/latest/APIReference/API_Operations.html) in the *AWS Data Pipeline API Reference*\.
++ **Action**: The *action* is the specific API action for which you are granting or denying permission\. For a list of actions for AWS Data Pipeline, see [Actions](https://docs.aws.amazon.com/datapipeline/latest/APIReference/API_Operations.html) in the *AWS Data Pipeline API Reference*\.
 + **Resource**: The resource that's affected by the action\. The only valid value here is `"*"`\. 
 + **Condition**: Conditions are optional\. They can be used to control when your policy will be in effect\.
 
-  AWS Data Pipeline implements the AWS\-wide context keys \(see [Available Keys for Conditions](http://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#AvailableKeys)\), plus the following service\-specific keys\.
+  AWS Data Pipeline implements the AWS\-wide context keys \(see [Available Keys for Conditions](https://docs.aws.amazon.com/IAM/latest/UserGuide/AccessPolicyLanguage_ElementDescriptions.html#AvailableKeys)\), plus the following service\-specific keys\.
   + `datapipeline:PipelineCreator` — To grant access to the user that created the pipeline\. For an example, see [Grant the pipeline owner full access](dp-example-tag-policies.md#ex3)\.
   + `datapipeline:Tag` — To grant access based on pipeline tagging\. For more information, see [Controlling Access to Pipelines Using Tags](#dp-control-access-tags)\.
   + `datapipeline:workerGroup` — To grant access based on the name of the worker group\. For more information, see [Controlling Access to Pipelines Using Worker Groups](#dp-control-access-workergroup)\.

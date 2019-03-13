@@ -1,8 +1,8 @@
 # Configure an Amazon EMR cluster in a private subnet<a name="emrcluster-example-private-subnet"></a>
 
 **Example**  <a name="example8"></a>
-This example includes a configuration that launches the cluster into a private subnet in a VPC\. For more information, see [Launch Amazon EMR Clusters into a VPC](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-vpc-launching-job-flows.html) in the *Amazon EMR Management Guide*\. This configuration is optional\. You can use it in any pipeline that uses an `EmrCluster` object\.  
-To launch an Amazon EMR cluster in a private subnet, specify `SubnetId`, `emrManagedMasterSecurityGroupId`, `emrManagedSlaveSecurityGroupId`, and `ServiceAccessSecurityGroupId` in your `EmrCluster` configuration\.  
+This example includes a configuration that launches the cluster into a private subnet in a VPC\. For more information, see [Launch Amazon EMR Clusters into a VPC](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-vpc-launching-job-flows.html) in the *Amazon EMR Management Guide*\. This configuration is optional\. You can use it in any pipeline that uses an `EmrCluster` object\.  
+To launch an Amazon EMR cluster in a private subnet, specify `SubnetId`, `emrManagedMasterSecurityGroupId`, `emrManagedSlaveSecurityGroupId`, and `serviceAccessSecurityGroupId` in your `EmrCluster` configuration\.  
 
 ```
 {

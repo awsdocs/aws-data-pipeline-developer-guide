@@ -34,7 +34,7 @@ First, create the pipeline\. The pipeline must be created in the same region as 
 
    1. For **DBInstance ID**, enter the DB instance name of the Aurora DB instance you want to use to copy data from the Aurora cluster\.
 
-      To locate the endpoint details for your DB instance, see [Connecting to a DB Instance Running the MySQL Database Engine](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html) in the *Amazon Relational Database Service User Guide*\. 
+      To locate the endpoint details for your DB instance, see [Connecting to a DB Instance Running the MySQL Database Engine](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ConnectToInstance.html) in the *Amazon RDS User Guide*\. 
 
    1. For **RDS MySQL username**, enter the user name you used when you created your MySQL database instance\.
 

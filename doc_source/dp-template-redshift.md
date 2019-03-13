@@ -11,10 +11,10 @@ If the `Overwrite_Existing` Amazon Redshift insert mode is being used:
 + If a distribution key is not provided and there is no primary key on the Amazon RDS MySQL table, the copy operation fails\.
 
 For more information about Amazon Redshift, see the following topics:
-+ [Amazon Redshift Cluster](http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html)
-+ Amazon Redshift [COPY](http://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html)
++ [Amazon Redshift Cluster](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.html)
++ Amazon Redshift [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html)
 + [Distribution styles](http://docs.aws.amazon.com/redshift/latest/dg/c_choosing_dist_sort.html) and DISTKEY [examples](http://docs.aws.amazon.com/redshift/latest/dg/c_Distribution_examples.html)
-+ [Sort Keys](http://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html)
++ [Sort Keys](https://docs.aws.amazon.com/redshift/latest/dg/t_Sorting_data.html)
 
 The following table describes how the script translates the data types:
 

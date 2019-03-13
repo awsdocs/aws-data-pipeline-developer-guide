@@ -127,7 +127,7 @@ In the Task Runner logs, you may see an error that is similar to the following:
 **Note**  
 In this error message, PollForTask may be replaced with names of other AWS Data Pipeline permissions\.
 
-This error message indicates that the IAM role you specified needs additional permissions necessary to interact with AWS Data Pipeline\. Ensure that your IAM role policy contains the following lines, where PollForTask is replaced with the name of the permission you want to add \(use \* to grant all permissions\)\. For more information about how to create a new IAM role and apply a policy to it, see [Managing IAM Policies](http://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html) in the *Using IAM* guide\. 
+This error message indicates that the IAM role you specified needs additional permissions necessary to interact with AWS Data Pipeline\. Ensure that your IAM role policy contains the following lines, where PollForTask is replaced with the name of the permission you want to add \(use \* to grant all permissions\)\. For more information about how to create a new IAM role and apply a policy to it, see [Managing IAM Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/ManagingPolicies.html) in the *Using IAM* guide\. 
 
 ```
 {

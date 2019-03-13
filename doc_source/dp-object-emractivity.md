@@ -37,10 +37,10 @@ Hadoop 2\.x \(AMI 3\.x\)
 ```
 
 **Note**  
-To pass arguments to an application in a step, you may need to escape the arguments that you pass\. For example, if you use `script-runner.jar` to run a shell script and want to pass arguments to the script, you must escape the commas that separate them\. The following step slot illustrates how to do this:   
+To pass arguments to an application in a step, you need to specify the Region in the path of the script, as in the following example\. In addition, you may need to escape the arguments that you pass\. For example, if you use `script-runner.jar` to run a shell script and want to pass arguments to the script, you must escape the commas that separate them\. The following step slot illustrates how to do this:   
 
 ```
-"step" : "s3://elasticmapreduce/libs/script-runner/script-runner.jar,s3://datapipeline/echo.sh,a\\\\,b\\\\,c"
+"step" : "s3://eu-west-1.elasticmapreduce/libs/script-runner/script-runner.jar,s3://datapipeline/echo.sh,a\\\\,b\\\\,c"
 ```
 This step uses `script-runner.jar` to run the `echo.sh` shell script and passes `a`, `b`, and `c` as a single argument to the script\. The first escape character is removed from the resultant argument so you may need to escape again\. For example, if you had `File\.gz` as an argument in JSON, you could escape it using `File\\\\.gz`\. However, because the first escape is discarded, you must use `File\\\\\\\\.gz `\.
 
@@ -51,7 +51,7 @@ This step uses `script-runner.jar` to run the `echo.sh` shell script and passes 
 
 | Object Invocation Fields | Description | Slot Type | 
 | --- | --- | --- | 
-| schedule | This object is invoked within the execution of a schedule interval\. Specify a schedule reference to another object to set the dependency execution order for this object\. You can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), you can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example, "schedule":\{"ref":"myScheduleId"\} | 
+| schedule | This object is invoked within the execution of a schedule interval\. Specify a schedule reference to another object to set the dependency execution order for this object\. You can satisfy this requirement by explicitly setting a schedule on the object, for example, by specifying "schedule": \{"ref": "DefaultSchedule"\}\. In most cases, it is better to put the schedule reference on the default pipeline object so that all objects inherit that schedule\. Or, if the pipeline has a tree of schedules \(schedules within the master schedule\), you can create a parent object that has a schedule reference\. For more information about example optional schedule configurations, see [https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-object-schedule.html) | Reference Object, for example, "schedule":\{"ref":"myScheduleId"\} | 
 
 
 ****  

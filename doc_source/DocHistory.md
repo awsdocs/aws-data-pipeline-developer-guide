@@ -2,14 +2,15 @@
 
 This documentation is associated with the 2012\-10\-29 version of AWS Data Pipeline\.
 
- **Latest documentation update: 19 April 2018\.** 
+ **Latest documentation update: 9 November 2018\.** 
 
 
 | Change | Description | Release Date | 
 | --- | --- | --- | 
+|  Updated the lists of supported Amazon EC2 and Amazon EMR instances\.  Updated the list of IDs of the HVM \(Hardware Virtual Machine\) AMIs used for the instances\.  |  Updated the lists of supported Amazon EC2 and Amazon EMR instances\. For more information, see [Supported Instance Types for Pipeline Work Activities](dp-supported-instance-types.md)\. Updated the list of IDs of the HVM \(Hardware Virtual Machine\) AMIs used for the instances\. For more information, see [Syntax](dp-object-ec2resource.md#ec2resource-syntax) and search for `imageId`\.  | 9 November 2018 | 
 | Added configuration for attaching Amazon EBS volumes to cluster nodes, and for launching an Amazon EMR cluster into a private subnet\. |  Added configuration options to an `EMRcluster` object\. You can use these options in pipelines that use Amazon EMR clusters\.  Use the `coreEbsConfiguration`, `masterEbsConfiguration`, and `TaskEbsConfiguration` fields to configure the attachment of Amazon EBS volumes to core, master, and task nodes in the Amazon EMR cluster\. For more information, see [Attach EBS volumes to cluster nodes](emrcluster-example-ebs.md)\. Use the `emrManagedMasterSecurityGroupId`, `emrManagedSlaveSecurityGroupId`, and `ServiceAccessSecurityGroupId` fields to configure an Amazon EMR cluster in a private subnet\. For more information, see [Configure an Amazon EMR cluster in a private subnet](emrcluster-example-private-subnet.md)\.  For more information about `EMRcluster` syntax, see [EmrCluster](dp-object-emrcluster.md)\.  | 19 April 2018 | 
-| Added a list of supported Amazon EC2 and Amazon EMR instances\. | Added a list of instances that AWS Data Pipeline creates by default, if you do not specify an instance type in the pipeline definition\. Added a list of supported Amazon EC2 and Amazon EMR instances\. For more information, see [Supported Instance Types for Pipeline Work Activities](dp-supported-instance-types.md)\. | 22 March 2018 | 
-| Add support for On\-demand pipelines |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/DocHistory.html)  | 22 February 2016 | 
+| Added the list of supported Amazon EC2 and Amazon EMR instances\. |  Added the list of instances that AWS Data Pipeline creates by default, if you do not specify an instance type in the pipeline definition\. Added a list of supported Amazon EC2 and Amazon EMR instances\. For more information, see [Supported Instance Types for Pipeline Work Activities](dp-supported-instance-types.md)\.  | 22 March 2018 | 
+| Added support for On\-demand pipelines\. |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/DocHistory.html)  | 22 February 2016 | 
 | Additional support for RDS databases |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/DocHistory.html)  | 17 August 2015 | 
 | Additional JDBC support |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/DocHistory.html)  | 7 July 2015 | 
 | HadoopActivity, Availability Zone, and Spot Support |  [\[See the AWS documentation website for more details\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/DocHistory.html)  | 1 June 2015 | 

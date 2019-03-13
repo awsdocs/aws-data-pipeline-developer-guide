@@ -6,15 +6,15 @@ Before copying data to Amazon Redshift within AWS Data Pipeline, ensure that you
 
 Once you have these options working and successfully complete a data load, transfer these options to AWS Data Pipeline, for performing the copying within it\.
 
- For `COPY` options, see [COPY](http://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the Amazon Redshift *Database Developer Guide*\. 
+ For `COPY` options, see [COPY](https://docs.aws.amazon.com/redshift/latest/dg/r_COPY.html) in the Amazon Redshift *Database Developer Guide*\. 
 
-For steps to load data from Amazon S3, see [Loading data from Amazon S3](http://docs.aws.amazon.com/redshift/latest/dg/t_Loading-data-from-S3.html) in the Amazon Redshift *Database Developer Guide*\. 
+For steps to load data from Amazon S3, see [Loading data from Amazon S3](https://docs.aws.amazon.com/redshift/latest/dg/t_Loading-data-from-S3.html) in the Amazon Redshift *Database Developer Guide*\. 
 
 For example, the following SQL command in Amazon Redshift creates a new table named `LISTING` and copies sample data from a publicly available bucket in Amazon S3\. 
 
 Replace the `<iam-role-arn>` and region with your own\. 
 
-For details about this example, see [Load Sample Data from Amazon S3](http://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-create-sample-db.html) in the Amazon Redshift *Getting Started Guide*\.
+For details about this example, see [Load Sample Data from Amazon S3](https://docs.aws.amazon.com/redshift/latest/gsg/rs-gsg-create-sample-db.html) in the Amazon Redshift *Getting Started Guide*\.
 
 ```
 create table listing(

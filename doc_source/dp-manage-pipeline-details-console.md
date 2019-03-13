@@ -29,7 +29,7 @@ If you do not see runs listed, check when your pipeline was scheduled\. Either c
 1. To take action on your incomplete or failed component, choose **Rerun**, **Mark Finished**, or **Cancel**\.
 
 **To monitor the progress of a pipeline using the AWS CLI**  
-To retrieve pipeline instance details, such as a history of the times that a pipeline has run, use the [list\-runs](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/list-runs.html) command\. This command enables you to filter the list of runs returned based on either their current status or the date\-range in which they were launched\. Filtering the results is useful because, depending on the pipeline's age and scheduling, the run history can be large\.
+To retrieve pipeline instance details, such as a history of the times that a pipeline has run, use the [list\-runs](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/list-runs.html) command\. This command enables you to filter the list of runs returned based on either their current status or the date\-range in which they were launched\. Filtering the results is useful because, depending on the pipeline's age and scheduling, the run history can be large\.
 
 The following example retrieves information for all runs\.
 

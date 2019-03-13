@@ -11,7 +11,7 @@ You can view your pipelines using the console or the command line interface \(CL
 ![\[List\]](http://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/images/dp-list-pipelines-dropdown.png)
 
 **To view your pipelines using the AWS CLI**
-+ Use the following [list\-pipelines](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/list-pipelines.html) command to list your pipelines:
++ Use the following [list\-pipelines](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/list-pipelines.html) command to list your pipelines:
 
   ```
   aws datapipeline list-pipelines

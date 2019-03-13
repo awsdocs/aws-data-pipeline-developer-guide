@@ -2,7 +2,7 @@
 
 **Example**  <a name="example8"></a>
 You can attach EBS volumes to any type of node in the EMR cluster within your pipeline\. To attach EBS volumes to nodes, use `coreEbsConfiguration`, `masterEbsConfiguration`, and `TaskEbsConfiguration` in your `EmrCluster` configuration\.   
-This example of the Amazon EMR cluster uses Amazon EBS volumes for its master, task, and core nodes\. For more information, see [Amazon EBS volumes in Amazon EMR](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-storage.html) in the *Amazon EMR Management Guide*\.  
+This example of the Amazon EMR cluster uses Amazon EBS volumes for its master, task, and core nodes\. For more information, see [Amazon EBS volumes in Amazon EMR](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-storage.html) in the *Amazon EMR Management Guide*\.  
 These configurations are optional\. You can use them in any pipeline that uses an `EmrCluster` object\.  
 In the pipeline, click the `EmrCluster` object configuration, choose **Master EBS Configuration**, **Core EBS Configuration**, or **Task EBS Configuration**, and enter the configuration details similar to the following example\.  
 

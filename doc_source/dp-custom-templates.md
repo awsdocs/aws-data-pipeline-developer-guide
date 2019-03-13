@@ -137,7 +137,7 @@ You can create a separate file to define your variables using parameter values\.
 
 ## Submitting the Pipeline Definition<a name="submit-pipeline-definition"></a>
 
-When you submit your pipeline definition, you can specify parameters, parameter objects, and parameter values\. For example, you can use the [put\-pipeline\-definition](http://docs.aws.amazon.com/cli/latest/reference/datapipeline/put-pipeline-definition.html) AWS CLI command as follows:
+When you submit your pipeline definition, you can specify parameters, parameter objects, and parameter values\. For example, you can use the [put\-pipeline\-definition](https://docs.aws.amazon.com/cli/latest/reference/datapipeline/put-pipeline-definition.html) AWS CLI command as follows:
 
 ```
 $ aws datapipeline put-pipeline-definition --pipeline-id id --pipeline-definition file://pipeline-definition.json \ 

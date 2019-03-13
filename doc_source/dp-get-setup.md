@@ -20,11 +20,11 @@ If you have an AWS account already, skip to the next task\. If you don't have an
 
 1. Open [https://aws\.amazon\.com/](https://aws.amazon.com/), and then choose **Create an AWS Account**\.
 **Note**  
-This might be unavailable in your browser if you previously signed into the AWS Management Console\. In that case, choose **Sign in to a different account**, and then choose **Create a new AWS account**\.
+If you previously signed in to the AWS Management Console using AWS account root user credentials, choose **Sign in to a different account**\. If you previously signed in to the console using IAM credentials, choose **Sign\-in using root account credentials**\. Then choose **Create a new AWS account**\.
 
 1. Follow the online instructions\.
 
-   Part of the sign\-up procedure involves receiving a phone call and entering a PIN using the phone keypad\.
+   Part of the sign\-up procedure involves receiving a phone call and entering a verification code using the phone keypad\.
 
 ## Create the Required IAM Roles \(CLI or API Only\)<a name="dp-iam-roles-new"></a>
 
@@ -115,7 +115,7 @@ Create these two types of custom roles:
         }
   ```
 
-For more information, see [Editing the Trust Relationship for an Existing Role](http://docs.aws.amazon.com/directoryservice/latest/admin-guide/edit_trust.html)\.
+For more information, see [Editing the Trust Relationship for an Existing Role](https://docs.aws.amazon.com/directoryservice/latest/admin-guide/edit_trust.html)\.
 
 For more information about how to specify custom roles for an `EmrCluster` object, see [Specify custom IAM roles](emrcluster-example2-disable-encryption.md#example4)\.
 
