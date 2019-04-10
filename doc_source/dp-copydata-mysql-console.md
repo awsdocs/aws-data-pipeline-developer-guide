@@ -12,7 +12,7 @@ You can create a pipeline to copy data from a MySQL table to a file in an Amazon
 
 ## Create the Pipeline<a name="dp-copydata-mysql-define-objects-console"></a>
 
-First, create the pipeline\. The pipeline must be created in the same region as your target RDS instance\.
+First, create the pipeline\. The EC2 instance launched as a part of pipeline must be created in the same region as your target RDS instance\.
 
 **To create your pipeline**
 
