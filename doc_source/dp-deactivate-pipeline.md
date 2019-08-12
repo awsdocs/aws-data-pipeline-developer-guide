@@ -2,6 +2,8 @@
 
 Deactivating a running pipeline pauses the pipeline execution\. To resume pipeline execution, you can activate the pipeline\. This enables you to make changes\. For example, if you are writing data to a database that is scheduled to undergo maintenance, you can deactivate the pipeline, wait for the maintenance to complete, and then activate the pipeline\.
 
+**Important note: if you deactivate an on-demand pipeline, then it can __never__ be activated and run again. If you mistakenly deactivate an on-demand pipeine, then you can create a new pipeline by cloning the deactivated pipeline. This clone of the original pipeline can then be activated successfully.**
+
 When you deactivate a pipeline, you can specify what happens to running activities\. By default, these activities are canceled immediately\. Alternatively, you can have AWS Data Pipeline wait until the activities finish before deactivating the pipeline\.
 
 When you activate a deactivated pipeline, you can specify when it resumes\. For example, using the AWS Management Console, you can resume after the last completed run, from the current time, or from a specified date and time\. Using the AWS CLI or the API, the pipeline resumes from the last completed execution by default, or you can specify the date and time to resume the pipeline\.
