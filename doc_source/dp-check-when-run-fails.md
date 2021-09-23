@@ -17,6 +17,7 @@ This topic provides various symptoms of AWS Data Pipeline problems and the recom
 + [Access Denied \- Not Authorized to Perform Function datapipeline:](#dp-access-denied)
 + [Older Amazon EMR AMIs May Create False Data for Large CSV Files](#AMIs-false-data-large-CSV)
 + [Increasing AWS Data Pipeline Limits](#dp-increase-limits)
++ [Missing Default VPC](#dp-missing-default-vpc)
 
 ## Pipeline Stuck in Pending Status<a name="dp-pipeline-doesnt-start"></a>
 
@@ -144,3 +145,7 @@ On Amazon EMR AMIs previous to 3\.9 \(3\.8 and below\) AWS Data Pipeline uses a 
 ## Increasing AWS Data Pipeline Limits<a name="dp-increase-limits"></a>
 
 Occasionally, you may exceed specific AWS Data Pipeline system limits\. For example, the default pipeline limit is 20 pipelines with 50 objects in each\. If you discover that you need more pipelines than the limit, consider merging multiple pipelines to create fewer pipelines with more objects in each\. For more information about the AWS Data Pipeline limits, see [AWS Data Pipeline Limits](dp-limits.md)\. However, if you are unable to work around the limits using the pipeline merge technique, request an increase in your capacity using this form: [Data Pipeline Limit Increase](https://console.aws.amazon.com/support/home#/case/create?issueType=service-limit-increase&limitType=service-code-datapipe)\.
+
+## Missing Default VPC<a name="dp-missing-default-vpc"></a>
+
+Your pipeline component will fail if it is dependent on EMR and your account does not have a default VPC configured.  See [Default VPC and default subnets](https://docs.aws.amazon.com/vpc/latest/userguide/default-vpc.html) for more info.  Alternatively, see [Launching Resources for Your Pipeline into a VPC](https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-resources-vpc.html) for how to launch your resources into a subnet of a nondefault VPC.
